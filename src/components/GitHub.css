@@ -1,0 +1,106 @@
+.github-section {
+  padding: 120px 24px;
+  background: linear-gradient(180deg, var(--pe-slate-900) 0%, var(--pe-slate-800) 100%);
+}
+
+.github-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  gap: 3px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.contribution-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.contribution-day {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: rgba(94, 234, 212, 0.08);
+  transition: all 0.2s ease;
+}
+
+.contribution-day[data-level="1"] { background: rgba(94, 234, 212, 0.2); }
+.contribution-day[data-level="2"] { background: rgba(94, 234, 212, 0.4); }
+.contribution-day[data-level="3"] { background: rgba(94, 234, 212, 0.6); }
+.contribution-day[data-level="4"] { background: var(--pe-teal-400); }
+
+.contribution-day:hover {
+  transform: scale(1.8);
+  box-shadow: 0 0 12px var(--pe-teal-400);
+  z-index: 10;
+  position: relative;
+}
+
+.repo-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.repo-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(94, 234, 212, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+  border-color: rgba(94, 234, 212, 0.3);
+  background: rgba(15, 23, 42, 0.8);
+  transform: translateY(-2px);
+}
+
+.repo-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--pe-slate-50);
+  margin-bottom: 8px;
+  font-family: monospace;
+}
+
+.repo-commits {
+  font-family: var(--font-display);
+  font-size: 40px;
+  color: var(--pe-teal-400);
+  font-weight: 500;
+}
+
+.repo-label {
+  font-size: 12px;
+  color: var(--pe-slate-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.github-total {
+  text-align: center;
+  margin-top: 48px;
+  color: var(--pe-slate-400);
+  font-size: 16px;
+}
+
+.github-total-number {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--pe-teal-300);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .contribution-grid {
+    display: none;
+  }
+}
