@@ -42,13 +42,14 @@
   font-family: var(--font-display);
   font-size: clamp(120px, 20vw, 280px);
   font-weight: 500;
-  line-height: 0.85;
+  line-height: 1;
   background: linear-gradient(180deg, var(--pe-teal-300) 0%, var(--pe-teal-500) 50%, var(--pe-teal-700) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 24px;
   letter-spacing: -0.03em;
+  padding: 0.1em 0;
 }
 
 .hero-subtitle {

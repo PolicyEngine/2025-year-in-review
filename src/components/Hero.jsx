@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero">
       <div className="hero-content">
         <img
-          src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/refs/heads/master/src/images/logos/policyengine/white.png"
+          src="https://raw.githubusercontent.com/PolicyEngine/policyengine-app/master/src/images/logos/policyengine/white.png"
           alt="PolicyEngine"
           className="hero-logo"
         />
