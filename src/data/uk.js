@@ -32,6 +32,14 @@ export const ukHighlights = [
     size: "large"
   },
   {
+    tag: "Major Event",
+    title: "PolicyEngine 2.0 Launch",
+    description: "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
+    link: "https://policyengine.org/uk/research/sep-2025-london-event",
+    linkText: "Event recap",
+    size: "large"
+  },
+  {
     tag: "Political Analysis",
     title: "Reform UK Manifesto",
     description: "Analysis of Nigel Farage's four tax-benefit reforms and their fiscal implications.",
@@ -48,17 +56,11 @@ export const ukHighlights = [
     size: "medium"
   },
   {
-    tag: "Major Event",
-    title: "PolicyEngine 2.0 Launch",
-    description: "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
-    link: "https://www.eventbrite.co.uk/e/policyengine-20-and-the-future-of-public-policy-analysis-tickets-1673065246189",
-    linkText: "Event details",
-    size: "large"
-  },
-  {
     tag: "New Tool",
     title: "Mansion Tax Calculator",
     description: "Interactive tool for exploring property wealth tax proposals and their distributional effects.",
+    link: "https://policyengine.org/uk/mansion-tax",
+    linkText: "Try it",
     image: "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/mansion-tax-map.gif",
     size: "medium"
   },
@@ -66,7 +68,58 @@ export const ukHighlights = [
     tag: "Analysis",
     title: "April 2025 Tax Changes",
     description: "Comprehensive analysis of employer NI, CGT reforms, private school VAT, and fuel duty changes.",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-employer-ni",
+    linkText: "Read analysis",
     size: "medium"
+  }
+];
+
+// Individual Autumn Budget 2025 provisions for detailed display
+export const autumnBudgetProvisions = [
+  {
+    title: "Employer National Insurance",
+    description: "Rate increase from 13.8% to 15% and threshold reduction from £9,100 to £5,000",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-employer-ni"
+  },
+  {
+    title: "Capital Gains Tax Reform",
+    description: "Lower rate rises from 10% to 18%, higher rate from 20% to 24%",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-cgt"
+  },
+  {
+    title: "Private School VAT",
+    description: "20% VAT applied to private school fees from January 2025",
+    link: "https://policyengine.org/uk/research/vat-private-schools"
+  },
+  {
+    title: "Fuel Duty Freeze",
+    description: "Maintaining the 5p fuel duty cut through 2025-26",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-fuel-duty"
+  },
+  {
+    title: "Income Tax Thresholds",
+    description: "Freeze on personal allowance and higher rate threshold extended",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-income-tax"
+  },
+  {
+    title: "Two-Child Limit",
+    description: "Analysis of maintaining vs. abolishing the two-child benefit limit",
+    link: "https://policyengine.org/uk/research/two-child-limit"
+  },
+  {
+    title: "Student Loan Reforms",
+    description: "Changes to Plan 5 student loan repayment thresholds",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-student-loans"
+  },
+  {
+    title: "Salary Sacrifice Cap",
+    description: "New limits on tax-advantaged salary sacrifice arrangements",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-salary-sacrifice"
+  },
+  {
+    title: "Inheritance Tax Changes",
+    description: "Reforms to agricultural and business property relief",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-inheritance-tax"
   }
 ];
 
@@ -86,7 +139,8 @@ export const ukTimeline = [
   {
     date: "April 2025",
     title: "April Tax Changes",
-    description: "Analysis of employer NI, CGT, school VAT, and fuel duty reforms."
+    description: "Analysis of employer NI, CGT, school VAT, and fuel duty reforms.",
+    link: "https://policyengine.org/uk/research/autumn-budget-2024-employer-ni"
   },
   {
     date: "May 2025",

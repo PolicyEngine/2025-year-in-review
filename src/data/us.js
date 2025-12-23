@@ -52,7 +52,7 @@ export const usHighlights = [
     tag: "New Tool",
     title: "SALTernative",
     description: "Free web app to simulate SALT deduction reforms as TCJA provisions expire.",
-    link: "https://blog.policyengine.org/whats-the-salternative-1e36c1b5a482",
+    link: "https://policyengine.org/us/salternative",
     linkText: "Try it",
     size: "medium"
   },
@@ -79,6 +79,55 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
     size: "medium"
+  }
+];
+
+// Key OBBBA provisions for detailed display
+export const obbbaProvisions = [
+  {
+    title: "Child Tax Credit Expansion",
+    description: "Maximum credit increases to $2,500 per child, with higher income phase-out thresholds",
+    link: "https://policyengine.org/us/research/obbba-ctc"
+  },
+  {
+    title: "SALT Deduction Cap",
+    description: "State and local tax deduction cap raised from $10,000 to $40,000",
+    link: "https://policyengine.org/us/research/obbba-salt"
+  },
+  {
+    title: "Standard Deduction Increase",
+    description: "Boosted to $16,000 for singles and $32,000 for joint filers",
+    link: "https://policyengine.org/us/research/obbba-standard-deduction"
+  },
+  {
+    title: "Social Security Tax Exemption",
+    description: "New $4,000 exclusion for seniors' Social Security benefits",
+    link: "https://policyengine.org/us/research/obbba-social-security"
+  },
+  {
+    title: "EITC for Childless Workers",
+    description: "Enhanced Earned Income Tax Credit for workers without qualifying children",
+    link: "https://policyengine.org/us/research/obbba-eitc"
+  },
+  {
+    title: "ACA Premium Tax Credit",
+    description: "Extension and modification of enhanced marketplace subsidies",
+    link: "https://policyengine.org/us/aca-calc"
+  },
+  {
+    title: "SNAP Work Requirements",
+    description: "Expanded age range for work requirements to age 64",
+    link: "https://policyengine.org/us/research/obbba-snap"
+  },
+  {
+    title: "Medicaid Changes",
+    description: "New work requirements and continuous coverage modifications",
+    link: "https://policyengine.org/us/research/obbba-medicaid"
+  },
+  {
+    title: "Tax Rate Structure",
+    description: "33% top rate maintained, AMT adjustments, and business provisions",
+    link: "https://policyengine.org/us/research/obbba-tax-rates"
   }
 ];
 
