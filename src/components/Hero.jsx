@@ -1,6 +1,10 @@
 import './Hero.css';
 
-export default function Hero() {
+export default function Hero({ country = 'us' }) {
+  const tagline = country === 'uk'
+    ? 'A year of democratising policy analysis. From new tools and partnerships to major policy events, we made economic policy accessible to everyone.'
+    : 'A year of democratizing policy analysis. From new tools and partnerships to major policy events, we made economic policy accessible to everyone.';
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -11,10 +15,7 @@ export default function Hero() {
         />
         <div className="hero-year">2025</div>
         <h1 className="hero-subtitle">Year in Review</h1>
-        <p className="hero-tagline">
-          A year of democratizing policy analysis. From new tools and partnerships
-          to major policy events, we made economic policy accessible to everyone.
-        </p>
+        <p className="hero-tagline">{tagline}</p>
       </div>
       <div className="scroll-indicator">
         <span>Scroll to explore</span>

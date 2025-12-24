@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import Highlights from './components/Highlights';
@@ -10,18 +10,34 @@ import { usStats, usHighlights, usTimeline, obbbaProvisions } from './data/us';
 import { ukStats, ukHighlights, ukTimeline, autumnBudgetProvisions } from './data/uk';
 import './styles/index.css';
 
-function CountryToggle({ country, setCountry }) {
+const COUNTRY_CODES = ['us', 'uk'];
+
+function CountryToggle({ country }) {
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  // Hide toggle if embed mode
+  if (searchParams.get('embed') === 'true') {
+    return null;
+  }
+
+  const handleCountryChange = (newCountry) => {
+    // Preserve search params when navigating
+    const params = searchParams.toString();
+    navigate(`/${newCountry}${params ? `?${params}` : ''}`);
+  };
+
   return (
     <div className="country-toggle">
       <button
         className={`country-btn ${country === 'us' ? 'active' : ''}`}
-        onClick={() => setCountry('us')}
+        onClick={() => handleCountryChange('us')}
       >
         United States
       </button>
       <button
         className={`country-btn ${country === 'uk' ? 'active' : ''}`}
-        onClick={() => setCountry('uk')}
+        onClick={() => handleCountryChange('uk')}
       >
         United Kingdom
       </button>
@@ -29,8 +45,9 @@ function CountryToggle({ country, setCountry }) {
   );
 }
 
-export default function App() {
-  const [country, setCountry] = useState('us');
+function YearInReview() {
+  const { countryId } = useParams();
+  const country = COUNTRY_CODES.includes(countryId) ? countryId : 'us';
 
   const stats = country === 'us' ? usStats : ukStats;
   const highlights = country === 'us' ? usHighlights : ukHighlights;
@@ -38,8 +55,8 @@ export default function App() {
 
   return (
     <>
-      <CountryToggle country={country} setCountry={setCountry} />
-      <Hero />
+      <CountryToggle country={country} />
+      <Hero country={country} />
       <Stats stats={stats} country={country} />
       <Highlights highlights={highlights} />
       {country === 'us' && (
@@ -64,5 +81,28 @@ export default function App() {
       <GitHub />
       <Footer />
     </>
+  );
+}
+
+function RedirectToCountry() {
+  // Detect country from browser locale
+  const browserLang = navigator.language;
+  const countryMap = {
+    'en-GB': 'uk',
+    'en-US': 'us',
+  };
+  const country = countryMap[browserLang] || 'us';
+  return <Navigate to={`/${country}`} replace />;
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RedirectToCountry />} />
+        <Route path="/:countryId" element={<YearInReview />} />
+        <Route path="*" element={<Navigate to="/us" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
