@@ -260,7 +260,7 @@ export const usPartners = [
   },
   {
     name: "Federal Reserve Bank of Atlanta",
-    description: "MOU integrating Policy Rules Database for model validation.",
+    description: "MOU for Policy Rules Database validation.",
     link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
   },
 ];
