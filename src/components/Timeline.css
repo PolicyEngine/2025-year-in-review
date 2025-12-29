@@ -16,7 +16,7 @@
 .timeline::before {
   content: '';
   position: absolute;
-  left: 8px;
+  left: 12px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -95,7 +95,7 @@
   }
 
   .timeline::before {
-    left: 4px;
+    left: 6px;
   }
 
   .timeline-dot {
