@@ -19,7 +19,7 @@ const statesWithReports = {
   },
   NY: {
     name: "New York",
-    link: "https://policyengine.org/us/research/policyengine-launches-in-new-york-state",
+    link: "https://www.policyengine.org/us/research/ny-hochul-budget",
   },
   OR: {
     name: "Oregon",
@@ -193,7 +193,6 @@ export default function StateCoverageMap() {
                 rel="noopener noreferrer"
               >
                 <span className="state-abbr">{abbr}</span>
-                <span className="state-name">{state.name}</span>
               </a>
             ))}
           </div>
