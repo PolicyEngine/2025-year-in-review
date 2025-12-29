@@ -101,7 +101,7 @@ function YearInReview() {
         <BudgetProvisions
           provisions={autumnBudgetProvisions}
           title="Autumn Budget 2025 Provisions"
-          intro="Our interactive dashboard models all eight major provisions. Click each to read our detailed analysis."
+          intro="Our interactive dashboard models all nine major provisions. Click each to read our detailed analysis."
           ctaLink="https://policyengine.org/uk/autumn-budget-2025"
           ctaText="Explore the full interactive dashboard"
         />
