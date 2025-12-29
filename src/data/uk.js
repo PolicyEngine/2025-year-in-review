@@ -65,7 +65,7 @@ export const ukHighlights = [
     title: "Reform UK Manifesto",
     description:
       "Analysis of Nigel Farage's four tax-benefit reforms and their £75 billion fiscal impact.",
-    link: "https://policyengine.org/uk/research/farage-speech-may-2025",
+    link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
     linkText: "View analysis",
     size: "medium",
   },
@@ -85,6 +85,15 @@ export const ukHighlights = [
       "Using synthetic firm microdata to analyse how VAT threshold changes affect revenues and businesses.",
     link: "https://policyengine.org/uk/research/uk-vat-thresholds",
     linkText: "Explore",
+    size: "medium",
+  },
+  {
+    tag: "Research",
+    title: "April 2025 Tax Changes",
+    description:
+      "Analysis of employer NI increase, CGT reforms, private school VAT, and fuel duty changes taking effect.",
+    link: "https://policyengine.org/uk/research/impact-of-tax-changes-2025-2026",
+    linkText: "Read analysis",
     size: "medium",
   },
   ];
@@ -152,7 +161,7 @@ export const ukTimeline = [
     title: "Reform UK Analysis",
     description:
       "Comprehensive cost analysis showing £75 billion fiscal impact of Farage's manifesto proposals.",
-    link: "https://policyengine.org/uk/research/farage-speech-may-2025",
+    link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
   },
   {
     date: "October 2025",
@@ -180,7 +189,7 @@ export const ukTimeline = [
     title: "OBR Forecast Integration",
     description:
       "Updated predictions incorporating new OBR forecasts on household income, poverty, and inequality.",
-    link: "https://policyengine.org/uk/research/obr-forecast-2025",
+    link: "https://policyengine.org/uk/research/obr-november-2025-projections",
   },
   {
     date: "December 2025",
