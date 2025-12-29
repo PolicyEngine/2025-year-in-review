@@ -31,7 +31,7 @@ export const ukHighlights = [
     linkText: "Explore the dashboard",
     image:
       "https://raw.githubusercontent.com/PolicyEngine/newsletters/main/assets/images/autumn-budget-dashboard-2025.png",
-    size: "full",
+    size: "large",
   },
   {
     tag: "Major Event",
@@ -40,7 +40,7 @@ export const ukHighlights = [
       "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
     link: "https://policyengine.org/uk/research/sep-2025-london-event",
     linkText: "Event recap",
-    size: "large",
+    size: "medium",
   },
   {
     tag: "New Tool",
@@ -49,6 +49,15 @@ export const ukHighlights = [
       "Free calculator showing how Gift Aid affects your taxes - see your tax relief, marginal savings rate, and true cost of giving.",
     link: "https://givecalc.org",
     linkText: "Try it",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
+    title: "Local Areas Dashboard",
+    description:
+      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+    link: "https://www.policyengine.org/uk/local-areas-dashboard",
+    linkText: "Explore",
     size: "medium",
   },
   {
@@ -177,8 +186,15 @@ export const ukTimeline = [
     date: "December 2025",
     title: "Autumn Budget Dashboard",
     description:
-      "Interactive tool for exploring all nine budget provision impacts through 2030-31.",
+      "Interactive tool for exploring budget provision impacts through 2030-31.",
     link: "https://policyengine.org/uk/autumn-budget-2025",
+  },
+  {
+    date: "December 2025",
+    title: "Local Areas Dashboard",
+    description:
+      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+    link: "https://www.policyengine.org/uk/local-areas-dashboard",
   },
   {
     date: "December 2025",
