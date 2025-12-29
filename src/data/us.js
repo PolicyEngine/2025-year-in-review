@@ -64,7 +64,7 @@ export const usHighlights = [
   },
   {
     tag: "New Tool",
-    title: "GiveCalc",
+    title: "GiveCalc 2.0",
     description:
       "Standalone calculator at givecalc.org showing true cost of charitable giving across all 50 states, DC, and NYC.",
     image: "/2025-year-in-review/images/givecalc_demo_2.png",
