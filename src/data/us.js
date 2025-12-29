@@ -82,6 +82,24 @@ export const usHighlights = [
     size: "medium",
   },
   {
+    tag: "Partnership",
+    title: "NBER TAXSIM Integration",
+    description:
+      "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
+    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+    linkText: "Read more",
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "Atlanta Fed. PRD Validation",
+    description:
+      "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
+    linkText: "Read more",
+    size: "medium",
+  },
+  {
     tag: "Funding",
     title: "NSF POSE Grant",
     description:
@@ -97,15 +115,6 @@ export const usHighlights = [
       "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
-    size: "medium",
-  },
-  {
-    tag: "Partnership",
-    title: "NBER TAXSIM Integration",
-    description:
-      "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
-    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
-    linkText: "Read more",
     size: "medium",
   },
 ];
@@ -248,5 +257,10 @@ export const usPartners = [
     name: "NBER",
     description: "MOU for TAXSIM emulator development.",
     link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+  },
+  {
+    name: "Federal Reserve Bank of Atlanta",
+    description: "MOU integrating Policy Rules Database for model validation.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
   },
 ];
