@@ -101,6 +101,13 @@
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+}
+
+button.featured-state-card {
+  outline: none;
 }
 
 .featured-state-card:hover {
@@ -109,8 +116,22 @@
 }
 
 .featured-state-card:hover .state-abbr,
-.featured-state-card:hover .state-name {
+.featured-state-card:hover .state-name,
+.featured-state-card:hover .multi-indicator {
   color: white;
+}
+
+.multi-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--pe-teal-700);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  line-height: 1;
 }
 
 .state-abbr {
@@ -170,4 +191,83 @@
   .featured-state-card {
     padding: 12px 20px;
   }
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--pe-slate-400);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: var(--pe-slate-700);
+}
+
+.popup-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pe-slate-800);
+  margin: 0 0 20px 0;
+}
+
+.popup-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popup-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: var(--pe-slate-50);
+  border-radius: 8px;
+  color: var(--pe-teal-700);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.popup-link:hover {
+  background: var(--pe-teal-600);
+  color: white;
+}
+
+.popup-link svg {
+  flex-shrink: 0;
+  opacity: 0.7;
 }

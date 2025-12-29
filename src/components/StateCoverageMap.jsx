@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import "./StateCoverageMap.css";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 
 // States with dedicated research/blog posts
+// Single link: { name, link }
+// Multiple links: { name, links: [{ title, url }] }
 const statesWithReports = {
   CA: {
     name: "California",
@@ -23,7 +26,10 @@ const statesWithReports = {
   },
   NY: {
     name: "New York",
-    link: "https://www.policyengine.org/us/research/ny-hochul-budget",
+    links: [
+      { title: "Hochul Budget Analysis", url: "https://www.policyengine.org/us/research/ny-hochul-budget" },
+      { title: "Working Families Tax Credit", url: "https://www.policyengine.org/us/research/ny-wftc" },
+    ],
   },
   OR: {
     name: "Oregon",
@@ -36,6 +42,11 @@ const statesWithReports = {
   KY: {
     name: "Kentucky",
     link: "https://www.policyengine.org/us/research/kentucky-cuts-income-tax-rate",
+  },
+  NYC: {
+    name: "New York City",
+    link: "https://www.policyengine.org/us/research/nyc-ctc-s2238",
+    isCity: true,
   },
 };
 
@@ -143,7 +154,64 @@ const featuredStateStyle = {
   },
 };
 
+function StateCard({ abbr, state, onOpenPopup }) {
+  const hasMultipleLinks = state.links && state.links.length > 1;
+
+  if (hasMultipleLinks) {
+    return (
+      <button
+        className="featured-state-card"
+        onClick={() => onOpenPopup(abbr)}
+      >
+        <span className="state-abbr">{abbr}</span>
+      </button>
+    );
+  }
+
+  return (
+    <a
+      href={state.link}
+      className="featured-state-card"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="state-abbr">{abbr}</span>
+    </a>
+  );
+}
+
+function ReportsPopup({ abbr, state, onClose }) {
+  return (
+    <div className="popup-overlay" onClick={onClose}>
+      <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+        <button className="popup-close" onClick={onClose}>
+          &times;
+        </button>
+        <h4 className="popup-title">{state.name} Reports</h4>
+        <div className="popup-links">
+          {state.links.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              className="popup-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.title}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function StateCoverageMap() {
+  const [openPopup, setOpenPopup] = useState(null);
+
   return (
     <section className="map-section">
       <div className="map-container">
@@ -188,17 +256,16 @@ export default function StateCoverageMap() {
         <div className="featured-states">
           <h3 className="featured-heading">Featured State Reports</h3>
           <div className="featured-grid">
-            {Object.entries(statesWithReports).map(([abbr, state]) => (
-              <a
-                key={abbr}
-                href={state.link}
-                className="featured-state-card"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="state-abbr">{abbr}</span>
-              </a>
-            ))}
+            {Object.entries(statesWithReports)
+              .sort(([a], [b]) => a.localeCompare(b))
+              .map(([abbr, state]) => (
+                <StateCard
+                  key={abbr}
+                  abbr={abbr}
+                  state={state}
+                  onOpenPopup={setOpenPopup}
+                />
+              ))}
           </div>
         </div>
 
@@ -211,6 +278,14 @@ export default function StateCoverageMap() {
           Learn about our state coverage
         </a>
       </div>
+
+      {openPopup && statesWithReports[openPopup] && (
+        <ReportsPopup
+          abbr={openPopup}
+          state={statesWithReports[openPopup]}
+          onClose={() => setOpenPopup(null)}
+        />
+      )}
     </section>
   );
 }
