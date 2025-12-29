@@ -1,0 +1,165 @@
+.map-section {
+  padding: 80px 24px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.map-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-subtitle {
+  color: var(--pe-slate-600);
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+
+.map-wrapper {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.us-map {
+  width: 100%;
+  height: auto;
+}
+
+/* State base styles - hover handled via react-simple-maps style prop */
+.rsm-geography {
+  outline: none;
+  transition: fill 0.15s ease;
+}
+
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--pe-slate-600);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-covered {
+  background: #5eead4;
+}
+
+.legend-featured {
+  background: #14b8a6;
+}
+
+.featured-states {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.featured-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--pe-slate-800);
+  margin-bottom: 20px;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.featured-state-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  border: 2px solid #14b8a6;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.featured-state-card:hover {
+  background: #14b8a6;
+  transform: translateY(-2px);
+}
+
+.featured-state-card:hover .state-abbr,
+.featured-state-card:hover .state-name {
+  color: white;
+}
+
+.state-abbr {
+  font-size: 24px;
+  font-weight: 700;
+  color: #14b8a6;
+  font-family: var(--font-display);
+}
+
+.state-name {
+  font-size: 13px;
+  color: var(--pe-slate-600);
+  margin-top: 4px;
+}
+
+.map-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  background: transparent;
+  border: 2px solid var(--pe-teal-500);
+  border-radius: 8px;
+  color: var(--pe-teal-500);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.map-cta:hover {
+  background: var(--pe-teal-500);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .map-section {
+    padding: 60px 16px;
+  }
+
+  .map-subtitle {
+    font-size: 16px;
+  }
+
+  .map-wrapper {
+    padding: 16px;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .featured-grid {
+    gap: 12px;
+  }
+
+  .featured-state-card {
+    padding: 12px 20px;
+  }
+}

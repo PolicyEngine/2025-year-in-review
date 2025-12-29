@@ -1,183 +1,251 @@
 export const usStats = [
   {
-    number: 2307,
+    number: 9623,
     label: "Commits",
-    detail: "To policyengine-us, expanding state coverage and policy accuracy"
+    detail: "Across 43 active repositories in 2025",
   },
   {
     number: 51,
     label: "States Modeled",
-    detail: "Complete income tax coverage for all 50 states + DC"
+    detail: "Complete income tax coverage for all 50 states + DC",
   },
   {
-    number: 829,
-    label: "App Commits",
-    detail: "Improvements to the PolicyEngine web interface"
+    number: 27,
+    label: "New Repos",
+    detail: "New projects launched in 2025",
   },
   {
-    number: 9,
-    label: "Newsletters",
-    detail: "Keeping our community informed throughout 2025"
-  }
+    number: 2924,
+    label: "US Model Commits",
+    detail: "To policyengine-us alone",
+  },
 ];
 
 export const usHighlights = [
   {
     tag: "Major Launch",
     title: "PolicyEngine 2.0",
-    description: "Completely rebuilt web application with modern architecture, faster performance, and improved user experience. The new platform powers all our calculators and policy tools.",
+    description:
+      "Completely rebuilt web application with modern architecture, faster performance, and improved user experience. The new platform powers all our calculators and policy tools.",
     link: "https://policyengine.org",
     linkText: "Try it",
-    size: "large"
+    size: "large",
   },
   {
     tag: "Interactive Tool",
     title: "OBBBA Household Explorer",
-    description: "Explore how the One Big Beautiful Bill Act affects 20,000 representative households across income levels, states, and provisions.",
+    description:
+      "Explore how the One Big Beautiful Bill Act affects 40,000+ representative households across income levels, states, and provisions.",
     link: "https://policyengine.org/us/obbba-household-by-household",
     linkText: "Explore households",
-    image: "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/obbba-household-by-household.gif",
-    size: "medium"
+    image:
+      "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/obbba-household-by-household.gif",
+    size: "medium",
   },
   {
     tag: "Interactive Tool",
     title: "ACA Premium Calculator",
-    description: "Compare enhanced versus original ACA subsidy schedules for any household configuration.",
+    description:
+      "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
     link: "https://policyengine.org/us/aca-calc",
     linkText: "Calculate credits",
-    image: "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/aca-calc-screenshot.jpg",
-    size: "medium"
+    image:
+      "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/aca-calc-screenshot.jpg",
+    size: "medium",
   },
   {
     tag: "New Tool",
     title: "SALTernative",
-    description: "Free web app to simulate SALT deduction reforms as TCJA provisions expire.",
+    description:
+      "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
     link: "https://policyengine.org/us/salternative",
     linkText: "Try it",
-    size: "medium"
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
+    title: "GiveCalc",
+    description:
+      "Standalone calculator at givecalc.org showing true cost of charitable giving across all 50 states, DC, and NYC.",
+    link: "https://givecalc.org",
+    linkText: "Calculate savings",
+    size: "medium",
   },
   {
     tag: "Partnership",
-    title: "NBER TAXSIM Integration",
-    description: "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development, enabling researchers to validate PolicyEngine against the gold-standard tax simulator.",
-    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+    title: "MyFriendBen Integration",
+    description:
+      "Launched in North Carolina with Code the Dream, our API powers benefits screening that has helped 55,000+ households access $33M+ in benefits.",
+    link: "https://policyengine.org/us/research/myfriendben-nc",
     linkText: "Read more",
-    size: "medium"
+    size: "medium",
   },
   {
     tag: "Funding",
     title: "NSF POSE Grant",
-    description: "Secured National Science Foundation funding to build sustainable open-source ecosystems for policy analysis.",
+    description:
+      "Secured National Science Foundation Pathways to Enable Open-Source Ecosystems funding to build sustainable infrastructure for policy analysis.",
     link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
     linkText: "Learn more",
-    size: "medium"
+    size: "medium",
   },
   {
     tag: "Data",
     title: "Enhanced CPS Launch",
-    description: "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
+    description:
+      "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
-    size: "medium"
-  }
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "NBER TAXSIM Integration",
+    description:
+      "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
+    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+    linkText: "Read more",
+    size: "medium",
+  },
 ];
 
-// Key OBBBA provisions for detailed display
-export const obbbaProvisions = [
-  {
-    title: "Child Tax Credit Expansion",
-    description: "Maximum credit increases to $2,500 per child, with higher income phase-out thresholds",
-    link: "https://policyengine.org/us/research/obbba-ctc"
-  },
-  {
-    title: "SALT Deduction Cap",
-    description: "State and local tax deduction cap raised from $10,000 to $40,000",
-    link: "https://policyengine.org/us/research/obbba-salt"
-  },
-  {
-    title: "Standard Deduction Increase",
-    description: "Boosted to $16,000 for singles and $32,000 for joint filers",
-    link: "https://policyengine.org/us/research/obbba-standard-deduction"
-  },
-  {
-    title: "Social Security Tax Exemption",
-    description: "New $4,000 exclusion for seniors' Social Security benefits",
-    link: "https://policyengine.org/us/research/obbba-social-security"
-  },
-  {
-    title: "EITC for Childless Workers",
-    description: "Enhanced Earned Income Tax Credit for workers without qualifying children",
-    link: "https://policyengine.org/us/research/obbba-eitc"
-  },
-  {
-    title: "ACA Premium Tax Credit",
-    description: "Extension and modification of enhanced marketplace subsidies",
-    link: "https://policyengine.org/us/aca-calc"
-  },
-  {
-    title: "SNAP Work Requirements",
-    description: "Expanded age range for work requirements to age 64",
-    link: "https://policyengine.org/us/research/obbba-snap"
-  },
-  {
-    title: "Medicaid Changes",
-    description: "New work requirements and continuous coverage modifications",
-    link: "https://policyengine.org/us/research/obbba-medicaid"
-  },
-  {
-    title: "Tax Rate Structure",
-    description: "33% top rate maintained, AMT adjustments, and business provisions",
-    link: "https://policyengine.org/us/research/obbba-tax-rates"
-  }
-];
+// OBBBA provisions - removed since we didn't publish individual provision breakdowns
+export const obbbaProvisions = [];
 
 export const usTimeline = [
   {
     date: "January 2025",
-    title: "Wealth Decile Analysis",
-    description: "New capability to break down policy impacts by wealth as well as income.",
-    link: "https://blog.policyengine.org/breaking-down-policy-impacts-by-wealth-decile-7a0bc0d9afe3"
+    title: "Nationwide State Tax Coverage",
+    description:
+      "Launched income tax modeling for all 50 states plus DC, completing nationwide coverage.",
+    link: "https://policyengine.org/us/research/state-tax-model-beta",
   },
   {
     date: "February 2025",
     title: "API Architecture Evolution",
-    description: "Major improvements to support expanding user base and external applications.",
-    link: "https://blog.policyengine.org/how-were-improving-our-api-in-2025-fd29fb517922"
+    description:
+      "Major improvements to support expanding user base and external applications like MyFriendBen.",
+    link: "https://blog.policyengine.org/how-were-improving-our-api-in-2025-fd29fb517922",
   },
   {
     date: "April 2025",
     title: "SALTernative Launch",
-    description: "Interactive tool for SALT deduction reform analysis as TCJA expires.",
-    link: "https://blog.policyengine.org/whats-the-salternative-1e36c1b5a482"
+    description:
+      "New tool for simulating SALT deduction reforms with behavioral responses ahead of TCJA expiration.",
+    link: "https://policyengine.org/us/salternative",
   },
   {
     date: "July 2025",
-    title: "OBBBA Analysis",
-    description: "Comprehensive analysis of the One Big Beautiful Bill Act as it passed Congress.",
-    link: "https://blog.policyengine.org/analysis-of-individual-income-tax-provisions-in-the-final-reconciliation-bill-bd5c77eee7b7"
-  },
-  {
-    date: "August 2025",
-    title: "Utah Tax Model",
-    description: "Expanded state-specific modeling to the Beehive State.",
-    link: "https://blog.policyengine.org/introducing-utah-state-income-tax-analysis-on-policyengine-4a1ccc262628"
+    title: "OBBBA Household Explorer",
+    description:
+      "Launched interactive tool exploring impacts on 40,000+ representative households.",
+    link: "https://blog.policyengine.org/introducing-the-obbba-household-explorer-4782a90ce7bc",
   },
   {
     date: "October 2025",
     title: "DC Office Launch",
-    description: "Opened new office at Open Gov Hub in Washington, DC.",
-    link: "https://policyengine.org/us/research/dc-office-ai-coding"
+    description:
+      "Opened new office at Open Gov Hub in Washington, DC with happy hour celebration.",
+    link: "https://policyengine.org/us/research/dc-office-ai-coding",
+  },
+  {
+    date: "October 2025",
+    title: "ACA Calculator Launch",
+    description:
+      "Interactive tool comparing enhanced vs. original ACA subsidy schedules ahead of 2025 expiration.",
+    link: "https://policyengine.org/us/research/introducing-aca-calc",
   },
   {
     date: "November 2025",
     title: "NTA Conference",
-    description: "Presented two papers at the National Tax Association's 118th Annual Conference.",
-    link: "https://ntanet.org/2025/05/118th-annual-conference-on-taxation-2025/"
+    description:
+      "Presented two papers: local tax microsimulation and Social Security benefit taxation reforms.",
+    link: "https://ntanet.org/2025/05/118th-annual-conference-on-taxation-2025/",
+  },
+  {
+    date: "November 2025",
+    title: "PolicyEngine 2.0 London Launch",
+    description:
+      "Major event at Central Hall Westminster showcasing new platform capabilities.",
+    link: "https://policyengine.org/us/research/sep-2025-london-event",
   },
   {
     date: "December 2025",
-    title: "Behavioral Responses",
-    description: "Integration of labor supply elasticities for dynamic policy analysis.",
-    link: "https://blog.policyengine.org/behavioral-responses-in-policyengine-us-18ecb8bf8267"
-  }
+    title: "GiveCalc 2.0 Launch",
+    description:
+      "Rebuilt charitable giving calculator as standalone app at givecalc.org with all 50 states + DC + NYC.",
+    link: "https://givecalc.org",
+  },
+];
+
+// Events section
+export const usEvents = [
+  {
+    title: "DC Office Happy Hour",
+    date: "October 22, 2025",
+    location: "Open Gov Hub, Washington DC",
+    description:
+      "Celebrated opening of our new DC office with the policy community.",
+  },
+  {
+    title: "NTA Annual Conference",
+    date: "November 6-8, 2025",
+    location: "The Westin Copley Place, Boston",
+    description:
+      "Presented two papers on local tax microsimulation and Social Security taxation.",
+  },
+  {
+    title: "PolicyEngine 2.0 London Launch",
+    date: "November 3, 2025",
+    location: "Central Hall Westminster, London",
+    description:
+      "Flagship event showcasing PolicyEngine 2.0 with live demos and expert panels.",
+  },
+];
+
+// Partner highlights
+// Impact metrics for display
+export const usImpactMetrics = [
+  {
+    number: "$1B+",
+    label: "Unclaimed Benefits Identified",
+    description:
+      "Our API powers benefit screening tools helping families access programs they're eligible for",
+  },
+  {
+    number: "55,000+",
+    label: "Households Helped",
+    description:
+      "Through MyFriendBen and other partners using our benefits screening API",
+  },
+  {
+    number: "51",
+    label: "States Covered",
+    description: "Complete income tax coverage for all 50 states plus DC",
+  },
+];
+
+export const usPartners = [
+  {
+    name: "MyFriendBen",
+    description:
+      "Benefits screening powered by PolicyEngine API, identifying over $1 billion in unclaimed benefits for families.",
+    link: "https://policyengine.org/us/research/myfriendben-nc",
+  },
+  {
+    name: "Code the Dream",
+    description: "Partnered to bring MyFriendBen to North Carolina residents.",
+    link: "https://codethedream.org",
+  },
+  {
+    name: "NSF",
+    description:
+      "POSE Phase I grant recipient for open-source policy ecosystem development.",
+    link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
+  },
+  {
+    name: "NBER",
+    description: "MOU for TAXSIM emulator development.",
+    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+  },
 ];
