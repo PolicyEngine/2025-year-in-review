@@ -7,15 +7,19 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 const statesWithReports = {
   CA: {
     name: "California",
-    link: "https://policyengine.org/us/research/california-income-tax",
+    link: "https://www.policyengine.org/us/research/california-billionaire-tax-marginal-rates",
   },
   ID: {
     name: "Idaho",
     link: "https://policyengine.org/us/research/idaho-2025-tax-change",
   },
-  MD: {
-    name: "Maryland",
-    link: "https://policyengine.org/us/research/maryland-standard-deduction",
+  MI: {
+    name: "Michigan",
+    link: "https://www.policyengine.org/us/research/michigan-bill-hb4170",
+  },
+  MT: {
+    name: "Montana",
+    link: "https://www.policyengine.org/us/research/montana-tax-cuts-2026",
   },
   NY: {
     name: "New York",
@@ -29,9 +33,9 @@ const statesWithReports = {
     name: "Utah",
     link: "https://policyengine.org/us/blog/introducing-utah-state-income-tax-analysis-on-policyengine",
   },
-  WA: {
-    name: "Washington",
-    link: "https://policyengine.org/us/research/policyengine-launches-in-washington-state",
+  KY: {
+    name: "Kentucky",
+    link: "https://www.policyengine.org/us/research/kentucky-cuts-income-tax-rate",
   },
 };
 
