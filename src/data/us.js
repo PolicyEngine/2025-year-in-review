@@ -32,7 +32,7 @@ export const usHighlights = [
     size: "large",
   },
   {
-    tag: "Interactive Tool",
+    tag: "New Tool",
     title: "OBBBA Household Explorer",
     description:
       "Explore how the One Big Beautiful Bill Act affects 40,000+ representative households across income levels, states, and provisions.",
@@ -43,7 +43,7 @@ export const usHighlights = [
     size: "medium",
   },
   {
-    tag: "Interactive Tool",
+    tag: "New Tool",
     title: "ACA Premium Calculator",
     description:
       "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
