@@ -9,6 +9,14 @@
   text-align: center;
 }
 
+.map-section .section-label {
+  color: var(--pe-teal-700);
+}
+
+.map-section .section-title {
+  color: var(--pe-slate-800);
+}
+
 .map-subtitle {
   color: var(--pe-slate-600);
   font-size: 18px;
