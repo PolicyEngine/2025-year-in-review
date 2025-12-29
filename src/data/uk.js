@@ -31,7 +31,7 @@ export const ukHighlights = [
     linkText: "Explore the dashboard",
     image:
       "https://raw.githubusercontent.com/PolicyEngine/newsletters/main/assets/images/autumn-budget-dashboard-2025.png",
-    size: "large",
+    size: "full",
   },
   {
     tag: "Major Event",
@@ -78,16 +78,7 @@ export const ukHighlights = [
     linkText: "Explore",
     size: "medium",
   },
-  {
-    tag: "Analysis",
-    title: "April 2025 Tax Changes",
-    description:
-      "Analysis of employer NI increase, CGT reforms, private school VAT, and fuel duty changes taking effect.",
-    link: "https://policyengine.org/uk/research/impact-of-tax-changes-2025-2026",
-    linkText: "Read analysis",
-    size: "medium",
-  },
-];
+  ];
 
 // Individual Autumn Budget 2025 provisions for detailed display
 export const autumnBudgetProvisions = [
@@ -126,15 +117,9 @@ export const autumnBudgetProvisions = [
     link: "https://policyengine.org/uk/research/high-value-council-tax-surcharge",
   },
   {
-    title: "April 2025 Tax Changes",
-    description:
-      "Employer NI, CGT reforms, private school VAT, and fuel duty changes",
-    link: "https://policyengine.org/uk/research/impact-of-tax-changes-2025-2026",
-  },
-  {
     title: "Combined Impacts",
     description:
-      "How all nine reforms interact - constituency-level breakdowns and income decile impacts",
+      "How all reforms interact - constituency-level breakdowns and income decile impacts",
     link: "https://policyengine.org/uk/research/uk-combined-reforms-autumn-budget-2025",
   },
 ];
