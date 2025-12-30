@@ -114,6 +114,11 @@ export default function Citations({ country = "us" }) {
         </p>
 
         <CitationSection
+          title="Funders"
+          items={data.funders}
+          color="#22C55E"
+        />
+        <CitationSection
           title="Media Coverage"
           items={data.media}
           color="#F97316"
