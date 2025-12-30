@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback } from "react";
 import {
   ComposableMap,
   Geographies,
@@ -52,7 +52,7 @@ function getStateColor(stateAbbr, isHovered) {
   return isHovered ? "#2C7A7B" : "#319795"; // teal-700/500
 }
 
-function HoverCard({ state, position }) {
+function HoverCard({ state, position, onMouseEnter, onMouseLeave }) {
   if (!state) return null;
 
   // Group engagements by type
@@ -66,6 +66,8 @@ function HoverCard({ state, position }) {
     <div
       className="hover-card"
       style={{ left: position.x, top: position.y }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <div className="hover-card-header">
         <h4>{state.name}</h4>
@@ -133,9 +135,10 @@ function HoverCard({ state, position }) {
   );
 }
 
-function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosition, mapRef }) {
+function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
   const handleMouseEnter = (stateAbbr, event) => {
     if (stateEngagements[stateAbbr]) {
+      cancelHide();
       const rect = mapRef.current?.getBoundingClientRect();
       if (rect) {
         const x = event.clientX - rect.left + 20;
@@ -159,7 +162,7 @@ function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosit
                 key={geo.rsmKey}
                 geography={geo}
                 onMouseEnter={(e) => handleMouseEnter(stateAbbr, e)}
-                onMouseLeave={() => setHoveredState(null)}
+                onMouseLeave={onMouseLeave}
                 style={{
                   default: {
                     fill: getStateColor(stateAbbr, false),
@@ -191,8 +194,9 @@ function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosit
   );
 }
 
-function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setTooltipPosition, mapRef }) {
+function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
   const handleMarkerEnter = (key, data, event) => {
+    cancelHide();
     const rect = mapRef.current?.getBoundingClientRect();
     if (rect) {
       const x = event.clientX - rect.left + 20;
@@ -265,7 +269,7 @@ function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setToo
               e
             )
           }
-          onMouseLeave={() => setHoveredLocation(null)}
+          onMouseLeave={onMouseLeave}
         >
           <circle
             r={12}
@@ -294,7 +298,7 @@ function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setToo
             key={key}
             coordinates={data.coordinates}
             onMouseEnter={(e) => handleMarkerEnter(key, data, e)}
-            onMouseLeave={() => setHoveredLocation(null)}
+            onMouseLeave={onMouseLeave}
           >
             <circle
               r={8}
@@ -315,7 +319,25 @@ export default function StateCoverageMap() {
   const [hoveredState, setHoveredState] = useState(null);
   const [hoveredLocation, setHoveredLocation] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const [isHoveringCard, setIsHoveringCard] = useState(false);
   const mapRef = useRef(null);
+  const hideTimeoutRef = useRef(null);
+
+  // Delayed hide to allow mouse to reach the card
+  const scheduleHide = useCallback((setter) => {
+    hideTimeoutRef.current = setTimeout(() => {
+      if (!isHoveringCard) {
+        setter(null);
+      }
+    }, 150);
+  }, [isHoveringCard]);
+
+  const cancelHide = useCallback(() => {
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+      hideTimeoutRef.current = null;
+    }
+  }, []);
 
   // Count engagements
   const engagementCounts = { report: 0, apiPartner: 0, research: 0, conference: 0 };
@@ -363,6 +385,8 @@ export default function StateCoverageMap() {
               tooltipPosition={tooltipPosition}
               setTooltipPosition={setTooltipPosition}
               mapRef={mapRef}
+              onMouseLeave={() => scheduleHide(setHoveredState)}
+              cancelHide={cancelHide}
             />
           ) : (
             <WorldMap
@@ -371,20 +395,38 @@ export default function StateCoverageMap() {
               tooltipPosition={tooltipPosition}
               setTooltipPosition={setTooltipPosition}
               mapRef={mapRef}
+              onMouseLeave={() => scheduleHide(setHoveredLocation)}
+              cancelHide={cancelHide}
             />
           )}
 
-          {viewMode === "us" && hoveredState && stateEngagements[hoveredState] && (
+          {viewMode === "us" && (hoveredState || isHoveringCard) && stateEngagements[hoveredState] && (
             <HoverCard
               state={stateEngagements[hoveredState]}
               position={tooltipPosition}
+              onMouseEnter={() => {
+                cancelHide();
+                setIsHoveringCard(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveringCard(false);
+                setHoveredState(null);
+              }}
             />
           )}
 
-          {viewMode === "world" && hoveredLocation && (
+          {viewMode === "world" && (hoveredLocation || isHoveringCard) && hoveredLocation && (
             <HoverCard
               state={hoveredLocation.data}
               position={tooltipPosition}
+              onMouseEnter={() => {
+                cancelHide();
+                setIsHoveringCard(true);
+              }}
+              onMouseLeave={() => {
+                setIsHoveringCard(false);
+                setHoveredLocation(null);
+              }}
             />
           )}
         </div>

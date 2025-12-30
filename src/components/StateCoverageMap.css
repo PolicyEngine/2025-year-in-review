@@ -61,6 +61,8 @@
   height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .world-map {
@@ -259,6 +261,7 @@
   height: 14px;
   border-radius: 4px;
   flex-shrink: 0;
+  display: inline-block;
 }
 
 /* Engagement Summary */
