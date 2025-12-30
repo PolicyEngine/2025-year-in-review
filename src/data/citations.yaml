@@ -1,0 +1,88 @@
+# PolicyEngine 2025 Citations & Media Mentions
+
+us:
+  media:
+    - outlet: NPR Marketplace
+      title: Max Ghenis interviewed on GOP reconciliation bill
+      description: Discussed extension of 2017 tax cuts and policy implications
+      url: https://www.marketplace.org/story/2025/05/12/work-starts-on-gop-reconciliation-bill-to-extend-tax-cuts
+      date: 2025-05-12
+      type: broadcast
+      icon: radio
+
+    - outlet: SVIC Podcast
+      title: Max Ghenis on Claude Code workflows
+      description: Deep dive into AI-assisted policy research and development
+      url: https://youtu.be/4apWdJR9-iY?si=-4gUF825nIC7Raii
+      type: podcast
+      icon: mic
+
+  publications:
+    - outlet: People's Policy Project
+      author: David Trimmer
+      title: "Rep. Tlaib's Economic Dignity for All Agenda"
+      description: PolicyEngine analysis showing historic poverty reduction potential
+      url: https://www.peoplespolicyproject.org/2025/11/20/rep-tlaibs-economic-dignity-for-all-agenda-would-bring-economic-security-for-millions/
+      date: 2025-11-20
+      icon: newspaper
+
+    - outlet: Jacobin
+      author: David Trimmer
+      title: "Rashida Tlaib's End Child Poverty Act"
+      description: Analysis showing dramatic child poverty and inequality reduction
+      url: https://jacobin.com/author/david-trimmer
+      icon: newspaper
+
+  research_partners:
+    - org: Niskanen Center
+      title: Child Tax Credit Reform Analysis
+      description: First external org to use PolicyEngine's enhanced microdata
+      url: https://www.policyengine.org/us/research/niskanen-center-analysis
+      icon: building
+
+  api_customers:
+    - org: Navvy
+      title: Student Basic Needs Coalition
+      description: Benefits navigation tool for college students launched in 2025
+      icon: building
+
+    - org: Mirza
+      title: Financial Planning
+      description: Integrated PolicyEngine for tax-benefit calculations
+      icon: building
+
+    - org: Tax Project
+      title: Tax Education
+      description: Using PolicyEngine to power tax policy education
+      icon: building
+
+    - org: Starlight
+      title: Benefits Navigation
+      description: PolicyEngine API powering benefits discovery
+      icon: building
+
+  government:
+    - entity: US Congress
+      title: Young Adult Tax Credit Act
+      description: Reps. McGarvey & Watson Coleman cited PolicyEngine research
+      icon: landmark
+
+    - entity: DC Council
+      title: District Child Tax Credit
+      description: Councilmember Zachary Parker cited PolicyEngine poverty analysis
+      icon: landmark
+
+uk:
+  media:
+    - outlet: Reform UK Coverage
+      title: Farage manifesto cost analysis
+      description: PolicyEngine estimates showed £75 billion cost of tax-benefit reforms
+      url: https://www.policyengine.org/uk/research/farage-speech-may-2025
+      type: analysis
+      icon: newspaper
+
+  government:
+    - entity: HM Treasury
+      title: Exploring PolicyEngine
+      description: UK government finance ministry considers PE as supplement to existing models
+      icon: landmark

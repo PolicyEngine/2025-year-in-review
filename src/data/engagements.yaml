@@ -1,0 +1,199 @@
+# PolicyEngine 2025 Engagements
+# Types: report, apiPartner, research, conference
+
+us:
+  CA:
+    name: California
+    engagements:
+      - type: report
+        title: Published analysis of California's billionaire tax marginal rates
+        url: https://www.policyengine.org/us/research/california-billionaire-tax-marginal-rates
+      - type: apiPartner
+        title: Powered Amplifi's expansion from LA County to Alameda and Riverside
+        description: Benefits screening API now covers three California counties
+      - type: conference
+        title: Presented AI economic growth research at EA Global SF
+        url: https://policyengine.github.io/ai-growth-research/
+
+  CO:
+    name: Colorado
+    engagements:
+      - type: apiPartner
+        title: Continuing to power MyFriendBen Colorado
+        description: Benefits screening reaches thousands of Colorado families
+        url: https://www.myfriendben.org
+
+  NC:
+    name: North Carolina
+    engagements:
+      - type: apiPartner
+        title: Launched MyFriendBen in North Carolina with Code the Dream
+        description: New 2025 partnership bringing benefits screening to NC residents
+        url: https://www.myfriendben.org
+
+  IL:
+    name: Illinois
+    engagements:
+      - type: apiPartner
+        title: Launched MyFriendBen in Illinois
+        description: Expanded benefits screening to Illinois in 2025
+        url: https://www.myfriendben.org
+
+  MA:
+    name: Massachusetts
+    engagements:
+      - type: apiPartner
+        title: Expanding MyFriendBen to Massachusetts in 2026
+        url: https://www.myfriendben.org
+        comingSoon: true
+      - type: conference
+        title: Ben Ogorek presented at NTA Annual Conference
+        location: Boston
+        description: Congressional district calibrated microdata and Social Security taxation reforms
+      - type: conference
+        title: Attended NBER conference
+        location: Boston
+      - type: research
+        title: Shared booth with MIT at NCSL
+        location: Boston
+        description: Exploring joint research study with MIT
+
+  TX:
+    name: Texas
+    engagements:
+      - type: apiPartner
+        title: Expanding MyFriendBen to Texas in 2026
+        url: https://www.myfriendben.org
+        comingSoon: true
+
+  DC:
+    name: Washington, D.C.
+    engagements:
+      - type: research
+        title: Partnered with Mothers Outreach Network on District CTC analysis
+        description: Research collaboration on child tax credit impacts for DC families
+      - type: conference
+        title: Demonstrated PolicyEngine at Congressional Hackathon
+        description: Showcased policy analysis tools to Congressional staff
+      - type: conference
+        title: Attended NTA Spring Symposium
+      - type: conference
+        title: Attended NBER Tax Policy and the Economy
+      - type: conference
+        title: Attended Code for America Summit
+
+  NY:
+    name: New York
+    engagements:
+      - type: report
+        title: Published analysis of Governor Hochul's budget proposal
+        url: https://www.policyengine.org/us/research/ny-hochul-budget
+      - type: report
+        title: Published analysis of NY Working Families Tax Credit
+        url: https://www.policyengine.org/us/research/ny-wftc
+      - type: report
+        title: Published NYC Child Tax Credit analysis (S2238)
+        location: New York City
+        url: https://www.policyengine.org/us/research/nyc-ctc-s2238
+      - type: conference
+        title: Presented AI economic growth research at EA Global NYC
+        location: New York City
+        url: https://policyengine.github.io/ai-growth-research/
+
+  ID:
+    name: Idaho
+    engagements:
+      - type: report
+        title: Published analysis of Idaho's 2025 tax changes
+        url: https://policyengine.org/us/research/idaho-2025-tax-change
+
+  KY:
+    name: Kentucky
+    engagements:
+      - type: report
+        title: Published analysis of Kentucky's income tax rate cut
+        url: https://www.policyengine.org/us/research/kentucky-cuts-income-tax-rate
+
+  MI:
+    name: Michigan
+    engagements:
+      - type: report
+        title: Published analysis of Michigan Bill HB4170
+        url: https://www.policyengine.org/us/research/michigan-bill-hb4170
+
+  MT:
+    name: Montana
+    engagements:
+      - type: report
+        title: Published analysis of Montana's 2026 tax cuts
+        url: https://www.policyengine.org/us/research/montana-tax-cuts-2026
+
+  OR:
+    name: Oregon
+    engagements:
+      - type: report
+        title: Published analysis of Oregon's nonrefundable exemption credit
+        url: https://policyengine.org/us/research/oregons-nonrefundable-exemption-credit
+
+  UT:
+    name: Utah
+    engagements:
+      - type: report
+        title: Launched Utah state income tax analysis on PolicyEngine
+        url: https://policyengine.org/us/blog/introducing-utah-state-income-tax-analysis-on-policyengine
+
+  WA:
+    name: Washington
+    engagements:
+      - type: conference
+        title: Hosted booth at APPAM Annual Conference
+        location: Seattle
+        description: Connected with researchers and policymakers on microsimulation
+
+  MO:
+    name: Missouri
+    engagements:
+      - type: conference
+        title: Invited to Aspen Institute's Benefit Leadership Summit
+        location: St. Louis
+        description: # TODO: Check email for details
+
+  TN:
+    name: Tennessee
+    engagements:
+      - type: conference
+        title: Presented PolicyEngine at PN3 event
+        location: Nashville
+        description: # TODO: Check email for details
+
+international:
+  UK:
+    name: United Kingdom
+    coordinates: [-0.1276, 51.5074]  # London
+    engagements:
+      - type: conference
+        title: Launched PolicyEngine 2.0 at Central Hall Westminster
+        location: London
+        description: Flagship event with live demos and expert panels
+
+  FR:
+    name: France
+    coordinates: [2.3522, 48.8566]  # Paris
+    engagements:
+      - type: conference
+        title: Presented at Rules as Code Europe conference
+        location: Paris
+        description: Showcased PolicyEngine's approach to computational legislation
+
+  CA_INT:
+    name: Canada
+    coordinates: [-79.3832, 43.6532]  # Toronto
+    engagements:
+      - type: conference
+        title: Max Ghenis presented on policy microsimulation
+        location: Toronto
+        description: # TODO: Check email for specific talk details
+      - type: conference
+        title: Attended SOLE Conference on labor economics
+        location: Toronto
+        description: Society of Labor Economists annual conference

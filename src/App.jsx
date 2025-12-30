@@ -14,6 +14,7 @@ import BudgetProvisions from "./components/BudgetProvisions";
 import Events from "./components/Events";
 import Partners from "./components/Partners";
 import ImpactMetrics from "./components/ImpactMetrics";
+import Citations from "./components/Citations";
 import StateCoverageMap from "./components/StateCoverageMap";
 import Timeline from "./components/Timeline";
 import GitHub from "./components/GitHub";
@@ -108,6 +109,7 @@ function YearInReview() {
       )}
       <Events events={events} />
       <ImpactMetrics metrics={impactMetrics} />
+      <Citations country={country} />
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
       <Timeline timeline={timeline} country={country} />

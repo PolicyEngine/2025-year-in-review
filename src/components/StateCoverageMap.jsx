@@ -1,291 +1,465 @@
-import { useState } from "react";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { useState, useRef } from "react";
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+  ZoomableGroup,
+} from "react-simple-maps";
+import engagementsData from "../data/engagements.yaml?raw";
+import YAML from "yaml";
 import "./StateCoverageMap.css";
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
+// Parse YAML data
+const parsedData = YAML.parse(engagementsData);
+const stateEngagements = parsedData.us;
+const internationalEngagements = parsedData.international;
 
-// States with dedicated research/blog posts
-// Single link: { name, link }
-// Multiple links: { name, links: [{ title, url }] }
-const statesWithReports = {
-  CA: {
-    name: "California",
-    link: "https://www.policyengine.org/us/research/california-billionaire-tax-marginal-rates",
-  },
-  ID: {
-    name: "Idaho",
-    link: "https://policyengine.org/us/research/idaho-2025-tax-change",
-  },
-  MI: {
-    name: "Michigan",
-    link: "https://www.policyengine.org/us/research/michigan-bill-hb4170",
-  },
-  MT: {
-    name: "Montana",
-    link: "https://www.policyengine.org/us/research/montana-tax-cuts-2026",
-  },
-  NY: {
-    name: "New York",
-    links: [
-      { title: "Hochul Budget Analysis", url: "https://www.policyengine.org/us/research/ny-hochul-budget" },
-      { title: "Working Families Tax Credit", url: "https://www.policyengine.org/us/research/ny-wftc" },
-    ],
-  },
-  OR: {
-    name: "Oregon",
-    link: "https://policyengine.org/us/research/oregons-nonrefundable-exemption-credit",
-  },
-  UT: {
-    name: "Utah",
-    link: "https://policyengine.org/us/blog/introducing-utah-state-income-tax-analysis-on-policyengine",
-  },
-  KY: {
-    name: "Kentucky",
-    link: "https://www.policyengine.org/us/research/kentucky-cuts-income-tax-rate",
-  },
-  NYC: {
-    name: "New York City",
-    link: "https://www.policyengine.org/us/research/nyc-ctc-s2238",
-    isCity: true,
-  },
+const usGeoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
+const worldGeoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+
+// PE App v2 aligned colors
+const ENGAGEMENT_TYPES = {
+  report: { icon: "📄", label: "Research Report", color: "#319795" },      // pe-teal-500
+  apiPartner: { icon: "🔗", label: "API Partner", color: "#F97316" },      // pe-coral
+  research: { icon: "📊", label: "Research Partnership", color: "#EAB308" }, // pe-gold
+  conference: { icon: "🎤", label: "Conference", color: "#8B5CF6" },        // violet
 };
 
 // FIPS code to state abbreviation mapping
 const fipsToAbbr = {
-  "01": "AL",
-  "02": "AK",
-  "04": "AZ",
-  "05": "AR",
-  "06": "CA",
-  "08": "CO",
-  "09": "CT",
-  10: "DE",
-  11: "DC",
-  12: "FL",
-  13: "GA",
-  15: "HI",
-  16: "ID",
-  17: "IL",
-  18: "IN",
-  19: "IA",
-  20: "KS",
-  21: "KY",
-  22: "LA",
-  23: "ME",
-  24: "MD",
-  25: "MA",
-  26: "MI",
-  27: "MN",
-  28: "MS",
-  29: "MO",
-  30: "MT",
-  31: "NE",
-  32: "NV",
-  33: "NH",
-  34: "NJ",
-  35: "NM",
-  36: "NY",
-  37: "NC",
-  38: "ND",
-  39: "OH",
-  40: "OK",
-  41: "OR",
-  42: "PA",
-  44: "RI",
-  45: "SC",
-  46: "SD",
-  47: "TN",
-  48: "TX",
-  49: "UT",
-  50: "VT",
-  51: "VA",
-  53: "WA",
-  54: "WV",
-  55: "WI",
-  56: "WY",
+  "01": "AL", "02": "AK", "04": "AZ", "05": "AR", "06": "CA",
+  "08": "CO", "09": "CT", "10": "DE", "11": "DC", "12": "FL",
+  "13": "GA", "15": "HI", "16": "ID", "17": "IL", "18": "IN",
+  "19": "IA", "20": "KS", "21": "KY", "22": "LA", "23": "ME",
+  "24": "MD", "25": "MA", "26": "MI", "27": "MN", "28": "MS",
+  "29": "MO", "30": "MT", "31": "NE", "32": "NV", "33": "NH",
+  "34": "NJ", "35": "NM", "36": "NY", "37": "NC", "38": "ND",
+  "39": "OH", "40": "OK", "41": "OR", "42": "PA", "44": "RI",
+  "45": "SC", "46": "SD", "47": "TN", "48": "TX", "49": "UT",
+  "50": "VT", "51": "VA", "53": "WA", "54": "WV", "55": "WI",
+  "56": "WY",
 };
 
-// Style objects for react-simple-maps hover support
-const defaultStateStyle = {
-  default: {
-    fill: "#5eead4",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-  hover: {
-    fill: "#2dd4bf",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-  pressed: {
-    fill: "#2dd4bf",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-};
-
-const featuredStateStyle = {
-  default: {
-    fill: "#14b8a6",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-  hover: {
-    fill: "#0d9488",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-  pressed: {
-    fill: "#0d9488",
-    stroke: "#fff",
-    strokeWidth: 0.5,
-    outline: "none",
-    cursor: "pointer",
-  },
-};
-
-function StateCard({ abbr, state, onOpenPopup }) {
-  const hasMultipleLinks = state.links && state.links.length > 1;
-
-  if (hasMultipleLinks) {
-    return (
-      <button
-        className="featured-state-card"
-        onClick={() => onOpenPopup(abbr)}
-      >
-        <span className="state-abbr">{abbr}</span>
-      </button>
-    );
+// Get engagement color based on primary type
+function getStateColor(stateAbbr, isHovered) {
+  const state = stateEngagements[stateAbbr];
+  if (!state) {
+    return isHovered ? "#4FD1C5" : "#5EEAD4"; // pe-teal-300/400
   }
 
-  return (
-    <a
-      href={state.link}
-      className="featured-state-card"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span className="state-abbr">{abbr}</span>
-    </a>
-  );
+  const types = state.engagements.map((e) => e.type);
+  if (types.includes("report")) {
+    return isHovered ? "#2C7A7B" : "#319795"; // pe-teal-700/500
+  }
+  if (types.includes("apiPartner")) {
+    return isHovered ? "#EA580C" : "#F97316"; // orange-600/500
+  }
+  if (types.includes("research")) {
+    return isHovered ? "#CA8A04" : "#EAB308"; // yellow-600/500
+  }
+  if (types.includes("conference")) {
+    return isHovered ? "#7C3AED" : "#8B5CF6"; // violet-600/500
+  }
+  return isHovered ? "#4FD1C5" : "#5EEAD4";
 }
 
-function ReportsPopup({ abbr, state, onClose }) {
+function HoverCard({ state, position }) {
+  if (!state) return null;
+
+  // Group engagements by type
+  const grouped = {};
+  state.engagements.forEach((eng) => {
+    if (!grouped[eng.type]) grouped[eng.type] = [];
+    grouped[eng.type].push(eng);
+  });
+
   return (
-    <div className="popup-overlay" onClick={onClose}>
-      <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-        <button className="popup-close" onClick={onClose}>
-          &times;
-        </button>
-        <h4 className="popup-title">{state.name} Reports</h4>
-        <div className="popup-links">
-          {state.links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              className="popup-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.title}
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          ))}
-        </div>
+    <div
+      className="hover-card"
+      style={{ left: position.x, top: position.y }}
+    >
+      <div className="hover-card-header">
+        <h4>{state.name}</h4>
+        <span className="engagement-count">
+          {state.engagements.length} engagement
+          {state.engagements.length > 1 ? "s" : ""}
+        </span>
+      </div>
+      <div className="hover-card-content">
+        {Object.entries(grouped).map(([type, engagements]) => (
+          <div key={type} className="engagement-group">
+            <div className="engagement-type-header">
+              <span
+                className="engagement-dot"
+                style={{ background: ENGAGEMENT_TYPES[type].color }}
+              />
+              <span className="engagement-type-label">
+                {ENGAGEMENT_TYPES[type].label}
+              </span>
+            </div>
+            {engagements.map((eng, idx) => (
+              <div key={idx} className="engagement-item">
+                {eng.url ? (
+                  <a
+                    href={eng.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="engagement-link"
+                  >
+                    <span className="engagement-title">{eng.title}</span>
+                    {eng.comingSoon && (
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    )}
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </a>
+                ) : (
+                  <span className="engagement-title">
+                    {eng.title}
+                    {eng.comingSoon && (
+                      <span className="coming-soon-badge">Coming Soon</span>
+                    )}
+                  </span>
+                )}
+                {eng.location && (
+                  <span className="engagement-location">{eng.location}</span>
+                )}
+                {eng.description && (
+                  <p className="engagement-description">{eng.description}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
+function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosition, mapRef }) {
+  const handleMouseEnter = (stateAbbr, event) => {
+    if (stateEngagements[stateAbbr]) {
+      const rect = mapRef.current?.getBoundingClientRect();
+      if (rect) {
+        const x = event.clientX - rect.left + 20;
+        const y = event.clientY - rect.top - 10;
+        setTooltipPosition({ x, y });
+      }
+      setHoveredState(stateAbbr);
+    }
+  };
+
+  return (
+    <ComposableMap projection="geoAlbersUsa" className="us-map">
+      <Geographies geography={usGeoUrl}>
+        {({ geographies }) =>
+          geographies.map((geo) => {
+            const stateAbbr = fipsToAbbr[geo.id];
+            const hasEngagement = stateEngagements[stateAbbr];
+
+            return (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                onMouseEnter={(e) => handleMouseEnter(stateAbbr, e)}
+                onMouseLeave={() => setHoveredState(null)}
+                style={{
+                  default: {
+                    fill: getStateColor(stateAbbr, false),
+                    stroke: "#fff",
+                    strokeWidth: 0.5,
+                    outline: "none",
+                    cursor: hasEngagement ? "pointer" : "default",
+                  },
+                  hover: {
+                    fill: getStateColor(stateAbbr, true),
+                    stroke: "#fff",
+                    strokeWidth: hasEngagement ? 1.5 : 0.5,
+                    outline: "none",
+                    cursor: hasEngagement ? "pointer" : "default",
+                  },
+                  pressed: {
+                    fill: getStateColor(stateAbbr, true),
+                    stroke: "#fff",
+                    strokeWidth: 0.5,
+                    outline: "none",
+                  },
+                }}
+              />
+            );
+          })
+        }
+      </Geographies>
+    </ComposableMap>
+  );
+}
+
+function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setTooltipPosition, mapRef }) {
+  const handleMarkerEnter = (key, data, event) => {
+    const rect = mapRef.current?.getBoundingClientRect();
+    if (rect) {
+      const x = event.clientX - rect.left + 20;
+      const y = event.clientY - rect.top - 10;
+      setTooltipPosition({ x, y });
+    }
+    setHoveredLocation({ key, data });
+  };
+
+  // Combine US (as single marker) and international
+  const usEngagementCount = Object.values(stateEngagements).reduce(
+    (acc, state) => acc + state.engagements.length,
+    0
+  );
+
+  return (
+    <ComposableMap
+      projection="geoMercator"
+      projectionConfig={{ scale: 120, center: [0, 30] }}
+      className="world-map"
+    >
+      <ZoomableGroup>
+        <Geographies geography={worldGeoUrl}>
+          {({ geographies }) =>
+            geographies.map((geo) => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                style={{
+                  default: {
+                    fill: "#E2E8F0",
+                    stroke: "#fff",
+                    strokeWidth: 0.3,
+                    outline: "none",
+                  },
+                  hover: {
+                    fill: "#CBD5E1",
+                    stroke: "#fff",
+                    strokeWidth: 0.3,
+                    outline: "none",
+                  },
+                  pressed: {
+                    fill: "#CBD5E1",
+                    stroke: "#fff",
+                    strokeWidth: 0.3,
+                    outline: "none",
+                  },
+                }}
+              />
+            ))
+          }
+        </Geographies>
+
+        {/* US marker */}
+        <Marker
+          coordinates={[-98.5795, 39.8283]}
+          onMouseEnter={(e) =>
+            handleMarkerEnter(
+              "US",
+              {
+                name: "United States",
+                engagements: [
+                  {
+                    type: "report",
+                    title: `${usEngagementCount} engagements across ${Object.keys(stateEngagements).length} states`,
+                    description: "Switch to US view for details",
+                  },
+                ],
+              },
+              e
+            )
+          }
+          onMouseLeave={() => setHoveredLocation(null)}
+        >
+          <circle
+            r={12}
+            fill="#319795"
+            stroke="#fff"
+            strokeWidth={2}
+            style={{ cursor: "pointer" }}
+          />
+          <text
+            textAnchor="middle"
+            y={4}
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "8px",
+              fill: "#fff",
+              fontWeight: "bold",
+            }}
+          >
+            US
+          </text>
+        </Marker>
+
+        {/* International markers */}
+        {Object.entries(internationalEngagements).map(([key, data]) => (
+          <Marker
+            key={key}
+            coordinates={data.coordinates}
+            onMouseEnter={(e) => handleMarkerEnter(key, data, e)}
+            onMouseLeave={() => setHoveredLocation(null)}
+          >
+            <circle
+              r={8}
+              fill="#8B5CF6"
+              stroke="#fff"
+              strokeWidth={2}
+              style={{ cursor: "pointer" }}
+            />
+          </Marker>
+        ))}
+      </ZoomableGroup>
+    </ComposableMap>
+  );
+}
+
 export default function StateCoverageMap() {
-  const [openPopup, setOpenPopup] = useState(null);
+  const [viewMode, setViewMode] = useState("us"); // 'us' or 'world'
+  const [hoveredState, setHoveredState] = useState(null);
+  const [hoveredLocation, setHoveredLocation] = useState(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const mapRef = useRef(null);
+
+  // Count engagements
+  const engagementCounts = { report: 0, apiPartner: 0, research: 0, conference: 0 };
+  Object.values(stateEngagements).forEach((state) => {
+    state.engagements.forEach((eng) => {
+      engagementCounts[eng.type]++;
+    });
+  });
+
+  const intlCount = Object.values(internationalEngagements).reduce(
+    (acc, loc) => acc + loc.engagements.length,
+    0
+  );
 
   return (
     <section className="map-section">
       <div className="map-container">
-        <p className="section-label">Coverage</p>
-        <h2 className="section-title">All 50 States + DC</h2>
+        <p className="section-label">Global Engagement</p>
+        <h2 className="section-title">2025 Activities</h2>
         <p className="map-subtitle">
-          Complete state income tax modeling across the entire United States
+          Research, partnerships, and conferences around the world
         </p>
 
-        <div className="map-wrapper">
-          <ComposableMap projection="geoAlbersUsa" className="us-map">
-            <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies.map((geo) => {
-                  const stateAbbr = fipsToAbbr[geo.id];
-                  const hasReport = statesWithReports[stateAbbr];
-
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      style={hasReport ? featuredStateStyle : defaultStateStyle}
-                    />
-                  );
-                })
-              }
-            </Geographies>
-          </ComposableMap>
+        {/* View Toggle */}
+        <div className="view-toggle">
+          <button
+            className={`view-btn ${viewMode === "us" ? "active" : ""}`}
+            onClick={() => setViewMode("us")}
+          >
+            🇺🇸 United States
+          </button>
+          <button
+            className={`view-btn ${viewMode === "world" ? "active" : ""}`}
+            onClick={() => setViewMode("world")}
+          >
+            🌍 World
+          </button>
         </div>
 
-        <div className="map-legend">
-          <div className="legend-item">
-            <span className="legend-color legend-covered"></span>
-            <span>State income tax modeled</span>
-          </div>
-          <div className="legend-item">
-            <span className="legend-color legend-featured"></span>
-            <span>Featured state reports</span>
+        <div className="map-wrapper" ref={mapRef}>
+          {viewMode === "us" ? (
+            <USMap
+              hoveredState={hoveredState}
+              setHoveredState={setHoveredState}
+              tooltipPosition={tooltipPosition}
+              setTooltipPosition={setTooltipPosition}
+              mapRef={mapRef}
+            />
+          ) : (
+            <WorldMap
+              hoveredLocation={hoveredLocation}
+              setHoveredLocation={setHoveredLocation}
+              tooltipPosition={tooltipPosition}
+              setTooltipPosition={setTooltipPosition}
+              mapRef={mapRef}
+            />
+          )}
+
+          {viewMode === "us" && hoveredState && stateEngagements[hoveredState] && (
+            <HoverCard
+              state={stateEngagements[hoveredState]}
+              position={tooltipPosition}
+            />
+          )}
+
+          {viewMode === "world" && hoveredLocation && (
+            <HoverCard
+              state={hoveredLocation.data}
+              position={tooltipPosition}
+            />
+          )}
+        </div>
+
+        {/* Legend */}
+        <div className="map-legend-new">
+          <div className="legend-row">
+            {viewMode === "us" && (
+              <div className="legend-item-new">
+                <span className="legend-dot" style={{ background: "#5EEAD4" }} />
+                <span>State tax modeled</span>
+              </div>
+            )}
+            {Object.entries(ENGAGEMENT_TYPES).map(
+              ([key, { label, color }]) =>
+                engagementCounts[key] > 0 && (
+                  <div key={key} className="legend-item-new">
+                    <span className="legend-dot" style={{ background: color }} />
+                    <span>{label}</span>
+                  </div>
+                )
+            )}
           </div>
         </div>
 
-        <div className="featured-states">
-          <h3 className="featured-heading">Featured State Reports</h3>
-          <div className="featured-grid">
-            {Object.entries(statesWithReports)
-              .sort(([a], [b]) => a.localeCompare(b))
-              .map(([abbr, state]) => (
-                <StateCard
-                  key={abbr}
-                  abbr={abbr}
-                  state={state}
-                  onOpenPopup={setOpenPopup}
-                />
-              ))}
+        {/* Summary Cards */}
+        <div className="engagement-summary">
+          <h3 className="summary-heading">2025 Engagement Highlights</h3>
+          <div className="summary-grid">
+            <div className="summary-card">
+              <span className="summary-number">{engagementCounts.report}</span>
+              <span className="summary-label">State Reports</span>
+            </div>
+            <div className="summary-card">
+              <span className="summary-number">
+                {Object.values(stateEngagements).filter((s) =>
+                  s.engagements.some((e) => e.type === "apiPartner")
+                ).length}
+              </span>
+              <span className="summary-label">API Partner States</span>
+            </div>
+            <div className="summary-card">
+              <span className="summary-number">{engagementCounts.conference + intlCount}</span>
+              <span className="summary-label">Conferences</span>
+            </div>
+            <div className="summary-card">
+              <span className="summary-number">
+                {Object.keys(internationalEngagements).length}
+              </span>
+              <span className="summary-label">Countries</span>
+            </div>
           </div>
         </div>
 
         <a
-          href="https://policyengine.org/us/research/state-tax-model-beta"
+          href="https://policyengine.org/us/research"
           className="map-cta"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn about our state coverage
+          View all research
         </a>
       </div>
-
-      {openPopup && statesWithReports[openPopup] && (
-        <ReportsPopup
-          abbr={openPopup}
-          state={statesWithReports[openPopup]}
-          onClose={() => setOpenPopup(null)}
-        />
-      )}
     </section>
   );
 }
