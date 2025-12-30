@@ -18,12 +18,12 @@ const internationalEngagements = parsedData.international;
 const usGeoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
 const worldGeoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
-// PE App v2 aligned colors
+// Subtle colors aligned with PE palette - muted variants
 const ENGAGEMENT_TYPES = {
-  report: { icon: "📄", label: "Research Report", color: "#319795" },      // pe-teal-500
-  apiPartner: { icon: "🔗", label: "API Partner", color: "#F97316" },      // pe-coral
-  research: { icon: "📊", label: "Research Partnership", color: "#EAB308" }, // pe-gold
-  conference: { icon: "🎤", label: "Conference", color: "#8B5CF6" },        // violet
+  report: { icon: "📄", label: "Research Report", color: "#2C7A7B" },      // pe-teal-700
+  apiPartner: { icon: "🔗", label: "API Partner", color: "#285E61" },      // pe-teal-800
+  research: { icon: "📊", label: "Research Partnership", color: "#234E52" }, // pe-teal-900
+  conference: { icon: "🎤", label: "Conference", color: "#1D4044" },        // darker teal
 };
 
 // FIPS code to state abbreviation mapping
@@ -41,27 +41,15 @@ const fipsToAbbr = {
   "56": "WY",
 };
 
-// Get engagement color based on primary type
+// Get engagement color - simple binary: has engagement or not
 function getStateColor(stateAbbr, isHovered) {
   const state = stateEngagements[stateAbbr];
   if (!state) {
-    return isHovered ? "#4FD1C5" : "#5EEAD4"; // pe-teal-300/400
+    // Base state - light slate gray
+    return isHovered ? "#CBD5E1" : "#E2E8F0"; // slate-300/200
   }
-
-  const types = state.engagements.map((e) => e.type);
-  if (types.includes("report")) {
-    return isHovered ? "#2C7A7B" : "#319795"; // pe-teal-700/500
-  }
-  if (types.includes("apiPartner")) {
-    return isHovered ? "#EA580C" : "#F97316"; // orange-600/500
-  }
-  if (types.includes("research")) {
-    return isHovered ? "#CA8A04" : "#EAB308"; // yellow-600/500
-  }
-  if (types.includes("conference")) {
-    return isHovered ? "#7C3AED" : "#8B5CF6"; // violet-600/500
-  }
-  return isHovered ? "#4FD1C5" : "#5EEAD4";
+  // Has engagement - teal
+  return isHovered ? "#2C7A7B" : "#319795"; // teal-700/500
 }
 
 function HoverCard({ state, position }) {
@@ -235,19 +223,19 @@ function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setToo
                 geography={geo}
                 style={{
                   default: {
-                    fill: "#E2E8F0",
+                    fill: "#F1F5F9",
                     stroke: "#fff",
                     strokeWidth: 0.3,
                     outline: "none",
                   },
                   hover: {
-                    fill: "#CBD5E1",
+                    fill: "#E2E8F0",
                     stroke: "#fff",
                     strokeWidth: 0.3,
                     outline: "none",
                   },
                   pressed: {
-                    fill: "#CBD5E1",
+                    fill: "#E2E8F0",
                     stroke: "#fff",
                     strokeWidth: 0.3,
                     outline: "none",
@@ -310,7 +298,7 @@ function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setToo
           >
             <circle
               r={8}
-              fill="#8B5CF6"
+              fill="#2C7A7B"
               stroke="#fff"
               strokeWidth={2}
               style={{ cursor: "pointer" }}
@@ -405,19 +393,22 @@ export default function StateCoverageMap() {
         <div className="map-legend-new">
           <div className="legend-row">
             {viewMode === "us" && (
-              <div className="legend-item-new">
-                <span className="legend-dot" style={{ background: "#5EEAD4" }} />
-                <span>State tax modeled</span>
-              </div>
+              <>
+                <div className="legend-item-new">
+                  <span className="legend-dot" style={{ background: "#E2E8F0" }} />
+                  <span>State tax & core benefits encoded</span>
+                </div>
+                <div className="legend-item-new">
+                  <span className="legend-dot" style={{ background: "#319795" }} />
+                  <span>2025 engagement (hover for details)</span>
+                </div>
+              </>
             )}
-            {Object.entries(ENGAGEMENT_TYPES).map(
-              ([key, { label, color }]) =>
-                engagementCounts[key] > 0 && (
-                  <div key={key} className="legend-item-new">
-                    <span className="legend-dot" style={{ background: color }} />
-                    <span>{label}</span>
-                  </div>
-                )
+            {viewMode === "world" && (
+              <div className="legend-item-new">
+                <span className="legend-dot" style={{ background: "#2C7A7B" }} />
+                <span>International engagement</span>
+              </div>
             )}
           </div>
         </div>
