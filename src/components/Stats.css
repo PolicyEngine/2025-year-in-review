@@ -4,11 +4,11 @@
 }
 
 .stats-section .section-label {
-  color: var(--pe-teal-600);
+  color: #0D9488;
 }
 
 .stats-section .section-title {
-  color: var(--pe-slate-800);
+  color: #1E293B;
 }
 
 .stats-container {
@@ -70,7 +70,7 @@
 
 .stat-label {
   font-size: 14px;
-  color: var(--pe-slate-700);
+  color: #334155;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -78,7 +78,7 @@
 
 .stat-detail {
   font-size: 13px;
-  color: var(--pe-slate-500);
+  color: #475569;
   margin-top: 16px;
   line-height: 1.6;
 }
