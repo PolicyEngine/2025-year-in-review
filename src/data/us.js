@@ -2,7 +2,7 @@ export const usStats = [
   {
     number: 51,
     label: "States Modeled",
-    detail: "Complete income tax coverage for all 50 states + DC",
+    detail: "Complete coverage of income tax and core benefit programs for all 50 states and DC",
   },
   {
     number: 55000,
@@ -246,7 +246,7 @@ export const usImpactMetrics = [
   {
     number: "51",
     label: "States Covered",
-    description: "Complete income tax coverage for all 50 states plus DC",
+    description: "Complete coverage of income tax and core benefit programs for all 50 states and DC",
   },
 ];
 
