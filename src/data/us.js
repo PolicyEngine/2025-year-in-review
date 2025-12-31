@@ -11,10 +11,10 @@ export const usStats = [
     detail: "Discovering benefits through our API partners",
   },
   {
-    number: 50,
+    number: 55,
     suffix: "+",
-    label: "Policy Analyses",
-    detail: "Research reports on tax and benefit reforms published in 2025",
+    label: "Reports & Presentations",
+    detail: "Policy analyses, research reports, and conference presentations in 2025",
   },
 ];
 
