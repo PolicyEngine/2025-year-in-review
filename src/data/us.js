@@ -260,7 +260,7 @@ export const usPartners = [
   {
     name: "Amplifi",
     description:
-      "Supported their expansion to Alameda and Riverside counties in California.",
+      "Supported expansion of Benefit Navigator to Alameda and Riverside counties in California.",
     link: "https://helloamplifi.com",
   },
   {
