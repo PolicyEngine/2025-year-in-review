@@ -80,7 +80,7 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
     linkText: "Learn more",
     image: "/2025-year-in-review/images/NSF-Logo.png",
-    size: "large",
+    size: "medium",
   },
   {
     tag: "Partnership",
@@ -90,7 +90,7 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
     linkText: "Read more",
     image: "/2025-year-in-review/images/NBER-logo.webp",
-    size: "large",
+    size: "medium",
   },
   {
     tag: "Partnership",
@@ -100,7 +100,7 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
     linkText: "Read more",
     image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
-    size: "large",
+    size: "medium",
   },
   {
     tag: "New Tool",
