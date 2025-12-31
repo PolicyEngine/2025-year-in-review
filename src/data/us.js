@@ -79,6 +79,7 @@ export const usHighlights = [
       "Interactive calculator showing Rhode Island Child Tax Credit eligibility and benefits.",
     link: "https://www.policyengine.org/us/rhode-island-ctc-calculator",
     linkText: "Calculate",
+    image: "/2025-year-in-review/images/rhode_island_ctc.png",
     size: "medium",
   },
   {
@@ -88,6 +89,7 @@ export const usHighlights = [
       "Launched in North Carolina with Code the Dream, our API powers benefits screening that has helped 55,000+ households access $33M+ in benefits.",
     link: "https://policyengine.org/us/research/myfriendben-nc",
     linkText: "Read more",
+    image: "/2025-year-in-review/images/MyFriendBenLogo_nc.png",
     size: "medium",
   },
   {
@@ -97,6 +99,7 @@ export const usHighlights = [
       "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
     link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
     linkText: "Read more",
+    image: "/2025-year-in-review/images/NBER-logo.webp",
     size: "medium",
   },
   {
@@ -106,6 +109,7 @@ export const usHighlights = [
       "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
     link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
     linkText: "Read more",
+    image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
     size: "medium",
   },
   {
@@ -115,6 +119,7 @@ export const usHighlights = [
       "Secured National Science Foundation Pathways to Enable Open-Source Ecosystems funding to build sustainable infrastructure for policy analysis.",
     link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
     linkText: "Learn more",
+    image: "/2025-year-in-review/images/NSF-Logo.png",
     size: "medium",
   },
   {
@@ -124,6 +129,7 @@ export const usHighlights = [
       "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
+    image: "/2025-year-in-review/images/us-data.png",
     size: "medium",
   },
 ];

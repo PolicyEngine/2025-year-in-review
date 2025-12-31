@@ -12,6 +12,11 @@ us:
       description: Supporting PolicyEngine's work on family and child policy analysis
       icon: building
 
+    - org: Arnold Ventures
+      title: State & Congressional District Policy Breakdowns
+      description: Philanthropy dedicated to evidence-based policy solutions supporting geographic policy analysis
+      icon: building
+
   media:
     - outlet: NPR Marketplace
       title: Max Ghenis interviewed on GOP reconciliation bill
