@@ -40,6 +40,7 @@ export const ukHighlights = [
       "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
     link: "https://policyengine.org/uk/research/sep-2025-london-event",
     linkText: "Event recap",
+    image: "/2025-year-in-review/images/policyengine_2.0.png",
     size: "medium",
   },
   {
