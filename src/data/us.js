@@ -258,6 +258,12 @@ export const usPartners = [
     link: "https://policyengine.org/us/research/myfriendben-nc",
   },
   {
+    name: "Amplifi",
+    description:
+      "Supported their expansion to Alameda and Riverside counties in California.",
+    link: "https://helloamplifi.com",
+  },
+  {
     name: "Code the Dream",
     description: "Partnered to bring MyFriendBen to North Carolina residents.",
     link: "https://codethedream.org",
