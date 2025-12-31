@@ -13,7 +13,6 @@ import Highlights from "./components/Highlights";
 import BudgetProvisions from "./components/BudgetProvisions";
 import Events from "./components/Events";
 import Partners from "./components/Partners";
-import ImpactMetrics from "./components/ImpactMetrics";
 import Citations from "./components/Citations";
 import StateCoverageMap from "./components/StateCoverageMap";
 import Timeline from "./components/Timeline";
@@ -26,7 +25,6 @@ import {
   obbbaProvisions,
   usEvents,
   usPartners,
-  usImpactMetrics,
 } from "./data/us";
 import {
   ukStats,
@@ -81,7 +79,6 @@ function YearInReview() {
   const timeline = country === "us" ? usTimeline : ukTimeline;
   const events = country === "us" ? usEvents : ukEvents;
   const partners = country === "us" ? usPartners : null;
-  const impactMetrics = country === "us" ? usImpactMetrics : null;
 
   return (
     <>
@@ -108,7 +105,6 @@ function YearInReview() {
         />
       )}
       <Events events={events} />
-      <ImpactMetrics metrics={impactMetrics} />
       <Citations country={country} />
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
