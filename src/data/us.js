@@ -1,23 +1,21 @@
 export const usStats = [
   {
-    number: 9623,
-    label: "Commits",
-    detail: "Across 43 active repositories in 2025",
-  },
-  {
     number: 51,
     label: "States Modeled",
     detail: "Complete income tax coverage for all 50 states + DC",
   },
   {
-    number: 27,
-    label: "New Repos",
-    detail: "New projects launched in 2025",
+    number: 55000,
+    label: "Households Helped",
+    suffix: "+",
+    detail: "Through MyFriendBen and partners using our API",
   },
   {
-    number: 2924,
-    label: "US Model Commits",
-    detail: "To policyengine-us alone",
+    number: 1,
+    prefix: "$",
+    suffix: "B+",
+    label: "Benefits Identified",
+    detail: "Unclaimed benefits found through our screening tools",
   },
 ];
 
