@@ -134,11 +134,6 @@ export default function Citations({ country = "us" }) {
           color="#EAB308"
         />
         <CitationSection
-          title="API Customers"
-          items={data.api_customers}
-          color="#14B8A6"
-        />
-        <CitationSection
           title="Government Citations"
           items={data.government}
           color="#319795"

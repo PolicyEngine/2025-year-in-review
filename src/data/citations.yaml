@@ -48,6 +48,7 @@ us:
       author: Kyle Pomerleau
       title: California Tax Analysis
       description: AEI cited PolicyEngine's California tax policy research
+      url: https://www.aei.org/articles/an-analysis-of-gubernatorial-candidate-ethan-penners-tax-reform-proposal/
       icon: newspaper
 
   research_partners:
@@ -75,6 +76,7 @@ us:
     - org: CRFB
       title: Social Security Taxation
       description: Analysis of Social Security benefit taxation reforms
+      url: https://policyengine.github.io/crfb-tob-impacts/dashboard/
       icon: building
 
   api_customers:
@@ -111,6 +113,7 @@ us:
     - entity: DC Council
       title: District Child Tax Credit
       description: Councilmember Zachary Parker cited PolicyEngine poverty analysis
+      url: https://dcgicoalition.org/restore-the-district-child-tax-credit/
       icon: landmark
 
     - entity: NY State Senate

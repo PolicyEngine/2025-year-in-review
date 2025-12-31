@@ -59,6 +59,7 @@ export const usHighlights = [
       "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
     link: "https://policyengine.org/us/salternative",
     linkText: "Try it",
+    image: "/2025-year-in-review/images/SALTernative.jpg",
     size: "medium",
   },
   {
@@ -69,6 +70,15 @@ export const usHighlights = [
     image: "/2025-year-in-review/images/givecalc_demo_2.png",
     link: "https://givecalc.org",
     linkText: "Calculate savings",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
+    title: "Rhode Island CTC Calculator",
+    description:
+      "Interactive calculator showing Rhode Island Child Tax Credit eligibility and benefits.",
+    link: "https://www.policyengine.org/us/rhode-island-ctc-calculator",
+    linkText: "Calculate",
     size: "medium",
   },
   {
@@ -274,7 +284,12 @@ export const usPartners = [
   },
   {
     name: "Tax Project",
-    description: "Partnered to provide Federal Income tax rules API access.",
+    description: "Using PolicyEngine to power tax policy education.",
     link: "https://taxproject.org",
+  },
+  {
+    name: "Starlight",
+    description: "PolicyEngine API powering benefits discovery.",
+    link: "https://www.get-starlight.com",
   },
 ];
