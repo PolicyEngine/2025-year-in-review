@@ -104,7 +104,7 @@ export const usHighlights = [
   },
   {
     tag: "Partnership",
-    title: "Atlanta Fed. PRD Validation",
+    title: "Atlanta Fed PRD Validation",
     description:
       "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
     link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
