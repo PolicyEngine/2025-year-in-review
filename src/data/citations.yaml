@@ -1,22 +1,6 @@
 # PolicyEngine 2025 Citations & Media Mentions
 
 us:
-  funders:
-    - org: National Science Foundation
-      title: POSE Grant
-      description: NSF Pathways to Enable Open-Source Ecosystems funding for sustainable policy analysis infrastructure
-      icon: landmark
-
-    - org: Pritzker Children's Initiative
-      title: Early Childhood Policy
-      description: Supporting PolicyEngine's work on family and child policy analysis
-      icon: building
-
-    - org: Arnold Ventures
-      title: State & Congressional District Policy Breakdowns
-      description: Philanthropy dedicated to evidence-based policy solutions supporting geographic policy analysis
-      icon: building
-
   media:
     - outlet: NPR Marketplace
       title: Max Ghenis interviewed on GOP reconciliation bill
@@ -111,8 +95,9 @@ us:
 
   government:
     - entity: US Congress
-      title: Young Adult Tax Credit Act
-      description: Reps. McGarvey & Watson Coleman cited PolicyEngine research
+      title: Economic Dignity for All Agenda
+      description: Rep. Tlaib's legislation cited People's Policy Project analysis using PolicyEngine
+      url: https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis
       icon: landmark
 
     - entity: DC Council

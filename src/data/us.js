@@ -269,6 +269,18 @@ export const usPartners = [
     link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
   },
   {
+    name: "Pritzker Children's Initiative",
+    description:
+      "Funding research on child tax credit and family benefit policy impacts.",
+    link: "https://pritzkerchildrensinitiative.org",
+  },
+  {
+    name: "Arnold Ventures",
+    description:
+      "Supporting evidence-based policy research and open-source development.",
+    link: "https://www.arnoldventures.org",
+  },
+  {
     name: "NBER",
     description: "MOU for TAXSIM emulator development.",
     link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
