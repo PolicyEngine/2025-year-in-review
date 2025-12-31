@@ -7,13 +7,6 @@ const GITHUB_STATS = {
   prs: 3422,
   reviews: 1832,
   issues: 2684,
-  topContributors: [
-    { name: "Max Ghenis", github: "MaxGhenis" },
-    { name: "Anthony V.", github: "anth-volk" },
-    { name: "Nikhil Woodruff", github: "nikhilwoodruff" },
-    { name: "Pavel Makarchuk", github: "pmberg" },
-    { name: "Vahid Ahmadi", github: "vahidahmadi" },
-  ],
 };
 
 function StatCard({ value, label, icon }) {
@@ -95,29 +88,6 @@ export default function SoftwareDev() {
               </svg>
             }
           />
-        </div>
-
-        <div className="top-contributors">
-          <h3>Top Contributors</h3>
-          <div className="contributors-row">
-            {GITHUB_STATS.topContributors.map((contributor, i) => (
-              <a
-                key={contributor.github}
-                href={`https://github.com/${contributor.github}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="contributor-avatar"
-                title={contributor.name}
-                style={{ "--delay": `${i * 100}ms` }}
-              >
-                <img
-                  src={`https://github.com/${contributor.github}.png`}
-                  alt={contributor.name}
-                />
-                <span className="contributor-name">{contributor.name.split(" ")[0]}</span>
-              </a>
-            ))}
-          </div>
         </div>
 
         <a
