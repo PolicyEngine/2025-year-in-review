@@ -43,6 +43,16 @@ export const usHighlights = [
   },
   {
     tag: "New Tool",
+    title: "SALTernative",
+    description:
+      "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
+    link: "https://policyengine.org/us/salternative",
+    linkText: "Try it",
+    image: "/2025-year-in-review/images/SALTernative.jpg",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
     title: "ACA Premium Calculator",
     description:
       "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
@@ -53,14 +63,44 @@ export const usHighlights = [
     size: "medium",
   },
   {
-    tag: "New Tool",
-    title: "SALTernative",
+    tag: "Data",
+    title: "Enhanced CPS Launch",
     description:
-      "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
-    link: "https://policyengine.org/us/salternative",
-    linkText: "Try it",
-    image: "/2025-year-in-review/images/SALTernative.jpg",
+      "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
+    link: "https://policyengine.org/us/research/enhanced-cps-launch",
+    linkText: "Explore",
+    image: "/2025-year-in-review/images/us-data.png",
     size: "medium",
+  },
+  {
+    tag: "Funding",
+    title: "NSF POSE Grant",
+    description:
+      "Secured National Science Foundation Pathways to Enable Open-Source Ecosystems funding to build sustainable infrastructure for policy analysis.",
+    link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
+    linkText: "Learn more",
+    image: "/2025-year-in-review/images/NSF-Logo.png",
+    size: "large",
+  },
+  {
+    tag: "Partnership",
+    title: "NBER TAXSIM Integration",
+    description:
+      "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
+    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+    linkText: "Read more",
+    image: "/2025-year-in-review/images/NBER-logo.webp",
+    size: "large",
+  },
+  {
+    tag: "Partnership",
+    title: "Atlanta Fed PRD Validation",
+    description:
+      "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
+    linkText: "Read more",
+    image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
+    size: "large",
   },
   {
     tag: "New Tool",
@@ -90,46 +130,6 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/myfriendben-nc",
     linkText: "Read more",
     image: "/2025-year-in-review/images/MyFriendBenLogo_nc.png",
-    size: "medium",
-  },
-  {
-    tag: "Partnership",
-    title: "NBER TAXSIM Integration",
-    description:
-      "Signed MOU with the National Bureau of Economic Research for TAXSIM emulator development.",
-    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
-    linkText: "Read more",
-    image: "/2025-year-in-review/images/NBER-logo.webp",
-    size: "medium",
-  },
-  {
-    tag: "Partnership",
-    title: "Atlanta Fed PRD Validation",
-    description:
-      "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
-    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
-    linkText: "Read more",
-    image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
-    size: "medium",
-  },
-  {
-    tag: "Funding",
-    title: "NSF POSE Grant",
-    description:
-      "Secured National Science Foundation Pathways to Enable Open-Source Ecosystems funding to build sustainable infrastructure for policy analysis.",
-    link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
-    linkText: "Learn more",
-    image: "/2025-year-in-review/images/NSF-Logo.png",
-    size: "medium",
-  },
-  {
-    tag: "Data",
-    title: "Enhanced CPS Launch",
-    description:
-      "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
-    link: "https://policyengine.org/us/research/enhanced-cps-launch",
-    linkText: "Explore",
-    image: "/2025-year-in-review/images/us-data.png",
     size: "medium",
   },
 ];
