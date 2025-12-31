@@ -252,6 +252,34 @@ export const usImpactMetrics = [
 
 export const usPartners = [
   {
+    name: "National Science Foundation",
+    description:
+      "POSE Phase I grant recipient for open-source policy ecosystem development.",
+    link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
+  },
+  {
+    name: "NBER",
+    description: "MOU for TAXSIM emulator development.",
+    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
+  },
+  {
+    name: "Federal Reserve Bank of Atlanta",
+    description: "MOU for Policy Rules Database validation.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
+  },
+  {
+    name: "Pritzker Children's Initiative",
+    description:
+      "Funding research on child tax credit and family benefit policy impacts.",
+    link: "https://pritzkerchildrensinitiative.org",
+  },
+  {
+    name: "Arnold Ventures",
+    description:
+      "Supporting evidence-based policy research and open-source development.",
+    link: "https://www.arnoldventures.org",
+  },
+  {
     name: "MyFriendBen",
     description:
       "Benefits screening powered by PolicyEngine API, identifying over $1 billion in unclaimed benefits for families.",
@@ -267,34 +295,6 @@ export const usPartners = [
     name: "Code the Dream",
     description: "Partnered to bring MyFriendBen to North Carolina residents.",
     link: "https://codethedream.org",
-  },
-  {
-    name: "NSF",
-    description:
-      "POSE Phase I grant recipient for open-source policy ecosystem development.",
-    link: "https://policyengine.org/us/research/nsf-pose-phase-1-grant",
-  },
-  {
-    name: "Pritzker Children's Initiative",
-    description:
-      "Funding research on child tax credit and family benefit policy impacts.",
-    link: "https://pritzkerchildrensinitiative.org",
-  },
-  {
-    name: "Arnold Ventures",
-    description:
-      "Supporting evidence-based policy research and open-source development.",
-    link: "https://www.arnoldventures.org",
-  },
-  {
-    name: "NBER",
-    description: "MOU for TAXSIM emulator development.",
-    link: "https://policyengine.org/us/research/policyengine-nber-mou-taxsim",
-  },
-  {
-    name: "Federal Reserve Bank of Atlanta",
-    description: "MOU for Policy Rules Database validation.",
-    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
   },
   {
     name: "Student Basic Needs Coalition",
