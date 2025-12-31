@@ -1,21 +1,20 @@
 export const usStats = [
   {
-    number: 61,
+    number: 62,
     label: "Jurisdictions Modeled",
-    detail: "Federal, 50 states + DC, Puerto Rico, and 8 local jurisdictions including NYC, LA County, and SF",
+    detail: "Federal, 50 states + DC, Puerto Rico, and 9 local jurisdictions including NYC, Chicago, and SF",
   },
   {
-    number: 55000,
-    label: "Households Helped",
+    number: 100,
+    label: "People Served",
+    suffix: "K+",
+    detail: "Discovering benefits through our API partners",
+  },
+  {
+    number: 50,
     suffix: "+",
-    detail: "Through MyFriendBen and partners using our API",
-  },
-  {
-    number: 1,
-    prefix: "$",
-    suffix: "B+",
-    label: "Benefits Identified",
-    detail: "Unclaimed benefits found through our screening tools",
+    label: "Policy Analyses",
+    detail: "Research reports on tax and benefit reforms published in 2025",
   },
 ];
 
