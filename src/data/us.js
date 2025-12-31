@@ -261,4 +261,19 @@ export const usPartners = [
     description: "MOU for Policy Rules Database validation.",
     link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
   },
+  {
+    name: "Student Basic Needs Coalition",
+    description: "Powers their Impactica Labs toolkit for SNAP benefit access.",
+    link: "https://www.studentbasicneeds.com/work/snap-into-action",
+  },
+  {
+    name: "Mirza",
+    description: "Partnered to help employees access government benefits through their platform.",
+    link: "https://heymirza.com",
+  },
+  {
+    name: "Tax Project",
+    description: "Partnered to provide Federal Income tax rules API access.",
+    link: "https://taxproject.org",
+  },
 ];
