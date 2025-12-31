@@ -27,6 +27,7 @@ export const usHighlights = [
       "Completely rebuilt web application with modern architecture, faster performance, and improved user experience. The new platform powers all our calculators and policy tools.",
     link: "https://policyengine.org",
     linkText: "Try it",
+    image: "/2025-year-in-review/images/policyengine_2.0.png",
     size: "large",
   },
   {
