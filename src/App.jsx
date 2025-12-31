@@ -17,7 +17,7 @@ import ImpactMetrics from "./components/ImpactMetrics";
 import Citations from "./components/Citations";
 import StateCoverageMap from "./components/StateCoverageMap";
 import Timeline from "./components/Timeline";
-import GitHub from "./components/GitHub";
+import SoftwareDev from "./components/SoftwareDev";
 import Footer from "./components/Footer";
 import {
   usStats,
@@ -113,7 +113,7 @@ function YearInReview() {
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
       <Timeline timeline={timeline} country={country} />
-      <GitHub />
+      <SoftwareDev />
       <Footer />
     </>
   );
