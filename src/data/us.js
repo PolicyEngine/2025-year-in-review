@@ -1,8 +1,8 @@
 export const usStats = [
   {
-    number: 51,
-    label: "States Modeled",
-    detail: "Complete coverage of income tax and core benefit programs for all 50 states and DC",
+    number: 61,
+    label: "Jurisdictions Modeled",
+    detail: "Federal, 50 states + DC, Puerto Rico, and 8 local jurisdictions including NYC, LA County, and SF",
   },
   {
     number: 55000,

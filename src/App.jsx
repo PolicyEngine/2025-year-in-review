@@ -11,7 +11,6 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Highlights from "./components/Highlights";
 import BudgetProvisions from "./components/BudgetProvisions";
-import Events from "./components/Events";
 import Partners from "./components/Partners";
 import Citations from "./components/Citations";
 import StateCoverageMap from "./components/StateCoverageMap";
@@ -23,7 +22,6 @@ import {
   usHighlights,
   usTimeline,
   obbbaProvisions,
-  usEvents,
   usPartners,
 } from "./data/us";
 import {
@@ -31,7 +29,6 @@ import {
   ukHighlights,
   ukTimeline,
   autumnBudgetProvisions,
-  ukEvents,
 } from "./data/uk";
 import "./styles/index.css";
 
@@ -77,7 +74,6 @@ function YearInReview() {
   const stats = country === "us" ? usStats : ukStats;
   const highlights = country === "us" ? usHighlights : ukHighlights;
   const timeline = country === "us" ? usTimeline : ukTimeline;
-  const events = country === "us" ? usEvents : ukEvents;
   const partners = country === "us" ? usPartners : null;
 
   return (
@@ -104,7 +100,6 @@ function YearInReview() {
           ctaText="Explore the full interactive dashboard"
         />
       )}
-      <Events events={events} />
       <Citations country={country} />
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
