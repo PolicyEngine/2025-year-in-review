@@ -103,12 +103,11 @@ export const usHighlights = [
   },
   {
     tag: "Partnership",
-    title: "MyFriendBen Integration",
+    title: "MyFriendBen Illinois Launch",
     description:
       "Launched in North Carolina with Code the Dream, our API powers benefits screening that has helped 55,000+ households access $33M+ in benefits.",
     link: "https://policyengine.org/us/research/myfriendben-nc",
     linkText: "Read more",
-    image: "/2025-year-in-review/images/MyFriendBenLogo_nc.png",
     size: "medium",
   },
   {
@@ -118,7 +117,6 @@ export const usHighlights = [
       "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
     link: "https://policyengine.org/us/salternative",
     linkText: "Try it",
-    image: "/2025-year-in-review/images/SALTernative.jpg",
     size: "medium",
   },
   {
