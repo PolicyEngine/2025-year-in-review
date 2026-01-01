@@ -143,7 +143,7 @@ export const usHighlights = [
     tag: "Partnership",
     title: "USC Research Collaboration",
     description:
-      "Supporting Matt Unrath's research analyzing effective marginal and average tax rates using PolicyEngine.",
+      "Supporting research analyzing effective marginal and average tax rates using PolicyEngine.",
     link: "https://policyengine.org/us/research/policyengine-usc-collaboration",
     linkText: "Read more",
     size: "medium",
