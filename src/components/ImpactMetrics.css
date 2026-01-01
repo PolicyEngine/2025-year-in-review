@@ -8,6 +8,14 @@
   margin: 0 auto;
 }
 
+.impact-section .section-label {
+  color: var(--pe-teal-700);
+}
+
+.impact-section .section-title {
+  color: var(--pe-slate-800);
+}
+
 .impact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

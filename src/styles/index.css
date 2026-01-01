@@ -3,6 +3,7 @@
 :root {
   --pe-teal-900: #134E4A;
   --pe-teal-700: #0F766E;
+  --pe-teal-600: #0D9488;
   --pe-teal-500: #319795;
   --pe-teal-400: #2DD4BF;
   --pe-teal-300: #5EEAD4;
@@ -10,6 +11,8 @@
   --pe-slate-900: #0F172A;
   --pe-slate-800: #1E293B;
   --pe-slate-700: #334155;
+  --pe-slate-600: #475569;
+  --pe-slate-500: #64748B;
   --pe-slate-400: #94A3B8;
   --pe-slate-200: #E2E8F0;
   --pe-slate-50: #F8FAFC;

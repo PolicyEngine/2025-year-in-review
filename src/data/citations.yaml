@@ -1,0 +1,128 @@
+# PolicyEngine 2025 Citations & Media Mentions
+
+us:
+  media:
+    - outlet: NPR Marketplace
+      title: Max Ghenis interviewed on GOP reconciliation bill
+      description: Discussed extension of 2017 tax cuts and policy implications
+      url: https://www.marketplace.org/story/2025/05/12/work-starts-on-gop-reconciliation-bill-to-extend-tax-cuts
+      date: 2025-05-12
+      type: broadcast
+      icon: radio
+
+    - outlet: SVIC Podcast
+      title: Max Ghenis on Claude Code workflows
+      description: Deep dive into AI-assisted policy research and development
+      url: https://youtu.be/4apWdJR9-iY?si=-4gUF825nIC7Raii
+      type: podcast
+      icon: mic
+
+  publications:
+    - outlet: People's Policy Project
+      author: David Trimmer
+      title: "Rep. Tlaib's Economic Dignity for All Agenda"
+      description: PolicyEngine analysis showing historic poverty reduction potential
+      url: https://www.peoplespolicyproject.org/2025/11/20/rep-tlaibs-economic-dignity-for-all-agenda-would-bring-economic-security-for-millions/
+      date: 2025-11-20
+      icon: newspaper
+
+    - outlet: Jacobin
+      author: David Trimmer
+      title: "Rashida Tlaib's End Child Poverty Act"
+      description: Analysis showing dramatic child poverty and inequality reduction
+      url: https://jacobin.com/author/david-trimmer
+      icon: newspaper
+
+    - outlet: American Enterprise Institute
+      author: Kyle Pomerleau
+      title: California Tax Analysis
+      description: AEI cited PolicyEngine's California tax policy research
+      url: https://www.aei.org/articles/an-analysis-of-gubernatorial-candidate-ethan-penners-tax-reform-proposal/
+      icon: newspaper
+
+  research_partners:
+    - org: Niskanen Center
+      title: Child Tax Credit Reform Analysis
+      description: First external org to use PolicyEngine's enhanced microdata
+      url: https://www.policyengine.org/us/research/niskanen-center-analysis
+      icon: building
+
+    - org: Niskanen Center
+      title: Rhode Island CTC Calculator
+      description: Collaborative tool for Rhode Island child tax credit analysis
+      icon: building
+
+    - org: USC
+      title: Implicit Marginal Tax Rates
+      description: Project using administrative data to estimate full distribution of implicit marginal tax rates
+      icon: building
+
+    - org: Better Government Lab
+      title: Benefit Take-up Research
+      description: UMich/Georgetown collaboration measuring benefit take-up from administrative data
+      icon: building
+
+    - org: CRFB
+      title: Social Security Taxation
+      description: Analysis of Social Security benefit taxation reforms
+      url: https://policyengine.github.io/crfb-tob-impacts/dashboard/
+      icon: building
+
+  api_customers:
+    - org: Navvy
+      title: Student Basic Needs Coalition
+      description: Benefits navigation tool for college students launched in 2025
+      url: https://navvyai.com
+      icon: building
+
+    - org: Mirza
+      title: Financial Planning
+      description: Integrated PolicyEngine for tax-benefit calculations
+      url: https://heymirza.com
+      icon: building
+
+    - org: Tax Project
+      title: Tax Education
+      description: Using PolicyEngine to power tax policy education
+      url: https://taxproject.org
+      icon: building
+
+    - org: Starlight
+      title: Benefits Navigation
+      description: PolicyEngine API powering benefits discovery
+      url: https://www.get-starlight.com
+      icon: building
+
+  government:
+    - entity: US Congress
+      title: Economic Dignity for All Agenda
+      description: Rep. Tlaib's legislation cited People's Policy Project analysis using PolicyEngine
+      url: https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis
+      icon: landmark
+
+    - entity: DC Council
+      title: District Child Tax Credit
+      description: Councilmember Zachary Parker cited PolicyEngine poverty analysis
+      url: https://dcgicoalition.org/restore-the-district-child-tax-credit/
+      icon: landmark
+
+    - entity: NY State Senate
+      title: Working Families Tax Credit
+      description: Senator Andrew Gounardes cited PolicyEngine analysis
+      url: https://www.nysenate.gov/newsroom/press-releases/2025/andrew-gounardes/sen-gounardes-working-families-tax-credit-would
+      icon: landmark
+
+uk:
+  media:
+    - outlet: Reform UK Coverage
+      title: Farage manifesto cost analysis
+      description: PolicyEngine estimates showed £75 billion cost of tax-benefit reforms
+      url: https://www.policyengine.org/uk/research/farage-speech-may-2025
+      type: analysis
+      icon: newspaper
+
+  government:
+    - entity: HM Treasury
+      title: Exploring PolicyEngine
+      description: UK government finance ministry considers PE as supplement to existing models
+      icon: landmark

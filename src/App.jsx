@@ -11,28 +11,24 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Highlights from "./components/Highlights";
 import BudgetProvisions from "./components/BudgetProvisions";
-import Events from "./components/Events";
 import Partners from "./components/Partners";
-import ImpactMetrics from "./components/ImpactMetrics";
+import Citations from "./components/Citations";
 import StateCoverageMap from "./components/StateCoverageMap";
 import Timeline from "./components/Timeline";
-import GitHub from "./components/GitHub";
+import SoftwareDev from "./components/SoftwareDev";
 import Footer from "./components/Footer";
 import {
   usStats,
   usHighlights,
   usTimeline,
   obbbaProvisions,
-  usEvents,
   usPartners,
-  usImpactMetrics,
 } from "./data/us";
 import {
   ukStats,
   ukHighlights,
   ukTimeline,
   autumnBudgetProvisions,
-  ukEvents,
 } from "./data/uk";
 import "./styles/index.css";
 
@@ -78,9 +74,7 @@ function YearInReview() {
   const stats = country === "us" ? usStats : ukStats;
   const highlights = country === "us" ? usHighlights : ukHighlights;
   const timeline = country === "us" ? usTimeline : ukTimeline;
-  const events = country === "us" ? usEvents : ukEvents;
   const partners = country === "us" ? usPartners : null;
-  const impactMetrics = country === "us" ? usImpactMetrics : null;
 
   return (
     <>
@@ -101,17 +95,16 @@ function YearInReview() {
         <BudgetProvisions
           provisions={autumnBudgetProvisions}
           title="Autumn Budget 2025 Provisions"
-          intro="Our interactive dashboard models all eight major provisions. Click each to read our detailed analysis."
+          intro="Our interactive dashboard models all nine major provisions. Click each to read our detailed analysis."
           ctaLink="https://policyengine.org/uk/autumn-budget-2025"
           ctaText="Explore the full interactive dashboard"
         />
       )}
-      <Events events={events} />
-      <ImpactMetrics metrics={impactMetrics} />
+      <Citations country={country} />
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
       <Timeline timeline={timeline} country={country} />
-      <GitHub />
+      <SoftwareDev />
       <Footer />
     </>
   );

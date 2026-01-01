@@ -8,6 +8,14 @@
   margin: 0 auto;
 }
 
+.partners-section .section-label {
+  color: var(--pe-teal-700);
+}
+
+.partners-section .section-title {
+  color: var(--pe-slate-800);
+}
+
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

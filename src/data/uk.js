@@ -40,7 +40,8 @@ export const ukHighlights = [
       "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
     link: "https://policyengine.org/uk/research/sep-2025-london-event",
     linkText: "Event recap",
-    size: "large",
+    image: "/2025-year-in-review/images/policyengine_2.0.png",
+    size: "medium",
   },
   {
     tag: "New Tool",
@@ -52,11 +53,20 @@ export const ukHighlights = [
     size: "medium",
   },
   {
+    tag: "New Tool",
+    title: "Local Areas Dashboard",
+    description:
+      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+    link: "https://www.policyengine.org/uk/local-areas-dashboard",
+    linkText: "Explore",
+    size: "medium",
+  },
+  {
     tag: "Political Analysis",
     title: "Reform UK Manifesto",
     description:
       "Analysis of Nigel Farage's four tax-benefit reforms and their £75 billion fiscal impact.",
-    link: "https://policyengine.org/uk/research/farage-speech-may-2025",
+    link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
     linkText: "View analysis",
     size: "medium",
   },
@@ -79,7 +89,7 @@ export const ukHighlights = [
     size: "medium",
   },
   {
-    tag: "Analysis",
+    tag: "Research",
     title: "April 2025 Tax Changes",
     description:
       "Analysis of employer NI increase, CGT reforms, private school VAT, and fuel duty changes taking effect.",
@@ -87,7 +97,7 @@ export const ukHighlights = [
     linkText: "Read analysis",
     size: "medium",
   },
-];
+  ];
 
 // Individual Autumn Budget 2025 provisions for detailed display
 export const autumnBudgetProvisions = [
@@ -126,15 +136,9 @@ export const autumnBudgetProvisions = [
     link: "https://policyengine.org/uk/research/high-value-council-tax-surcharge",
   },
   {
-    title: "April 2025 Tax Changes",
-    description:
-      "Employer NI, CGT reforms, private school VAT, and fuel duty changes",
-    link: "https://policyengine.org/uk/research/impact-of-tax-changes-2025-2026",
-  },
-  {
     title: "Combined Impacts",
     description:
-      "How all nine reforms interact - constituency-level breakdowns and income decile impacts",
+      "How all reforms interact - constituency-level breakdowns and income decile impacts",
     link: "https://policyengine.org/uk/research/uk-combined-reforms-autumn-budget-2025",
   },
 ];
@@ -158,7 +162,7 @@ export const ukTimeline = [
     title: "Reform UK Analysis",
     description:
       "Comprehensive cost analysis showing £75 billion fiscal impact of Farage's manifesto proposals.",
-    link: "https://policyengine.org/uk/research/farage-speech-may-2025",
+    link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
   },
   {
     date: "October 2025",
@@ -186,14 +190,21 @@ export const ukTimeline = [
     title: "OBR Forecast Integration",
     description:
       "Updated predictions incorporating new OBR forecasts on household income, poverty, and inequality.",
-    link: "https://policyengine.org/uk/research/obr-forecast-2025",
+    link: "https://policyengine.org/uk/research/obr-november-2025-projections",
   },
   {
     date: "December 2025",
     title: "Autumn Budget Dashboard",
     description:
-      "Interactive tool for exploring all nine budget provision impacts through 2030-31.",
+      "Interactive tool for exploring budget provision impacts through 2030-31.",
     link: "https://policyengine.org/uk/autumn-budget-2025",
+  },
+  {
+    date: "December 2025",
+    title: "Local Areas Dashboard",
+    description:
+      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+    link: "https://www.policyengine.org/uk/local-areas-dashboard",
   },
   {
     date: "December 2025",

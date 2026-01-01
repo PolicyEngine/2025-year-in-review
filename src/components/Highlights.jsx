@@ -37,7 +37,7 @@ export default function Highlights({ highlights }) {
     <section className="highlights-section">
       <div className="highlights-container">
         <p className="section-label">Key Achievements</p>
-        <h2 className="section-title">2025 Highlights</h2>
+        <h2 className="section-title">2025 highlights</h2>
         <div className="highlight-grid">
           {highlights.map((highlight, index) => (
             <HighlightCard key={index} highlight={highlight} />
