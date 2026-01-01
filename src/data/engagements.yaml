@@ -35,9 +35,9 @@ us:
     name: Illinois
     engagements:
       - type: apiPartner
-        title: Launched MyFriendBen in Illinois
-        description: Expanded benefits screening to Illinois in 2025
-        url: https://www.myfriendben.org
+        title: Launched Illinois Benefit Hub
+        description: New benefits screening platform helps Illinois residents identify public assistance programs
+        url: https://policyengine.org/us/research/illinois-benefit-hub
 
   MA:
     name: Massachusetts

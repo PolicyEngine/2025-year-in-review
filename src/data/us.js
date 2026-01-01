@@ -41,37 +41,6 @@ export const usHighlights = [
     size: "medium",
   },
   {
-    tag: "New Tool",
-    title: "SALTernative",
-    description:
-      "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
-    link: "https://policyengine.org/us/salternative",
-    linkText: "Try it",
-    image: "/2025-year-in-review/images/SALTernative.jpg",
-    size: "medium",
-  },
-  {
-    tag: "New Tool",
-    title: "ACA Premium Calculator",
-    description:
-      "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
-    link: "https://policyengine.org/us/aca-calc",
-    linkText: "Calculate credits",
-    image:
-      "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/aca-calc-screenshot.jpg",
-    size: "medium",
-  },
-  {
-    tag: "Data",
-    title: "Enhanced CPS Launch",
-    description:
-      "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
-    link: "https://policyengine.org/us/research/enhanced-cps-launch",
-    linkText: "Explore",
-    image: "/2025-year-in-review/images/us-data.png",
-    size: "medium",
-  },
-  {
     tag: "Funding",
     title: "NSF POSE Grant",
     description:
@@ -103,22 +72,33 @@ export const usHighlights = [
   },
   {
     tag: "New Tool",
+    title: "ACA Premium Calculator",
+    description:
+      "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
+    link: "https://policyengine.org/us/aca-calc",
+    linkText: "Calculate credits",
+    image:
+      "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/aca-calc-screenshot.jpg",
+    size: "medium",
+  },
+  {
+    tag: "Data",
+    title: "Enhanced CPS Launch",
+    description:
+      "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
+    link: "https://policyengine.org/us/research/enhanced-cps-launch",
+    linkText: "Explore",
+    image: "/2025-year-in-review/images/us-data.png",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
     title: "GiveCalc 2.0",
     description:
       "Standalone calculator at givecalc.org showing true cost of charitable giving across all 50 states, DC, and NYC.",
     image: "/2025-year-in-review/images/givecalc_demo_2.png",
     link: "https://givecalc.org",
     linkText: "Calculate savings",
-    size: "medium",
-  },
-  {
-    tag: "New Tool",
-    title: "Rhode Island CTC Calculator",
-    description:
-      "Interactive calculator showing Rhode Island Child Tax Credit eligibility and benefits.",
-    link: "https://www.policyengine.org/us/rhode-island-ctc-calculator",
-    linkText: "Calculate",
-    image: "/2025-year-in-review/images/rhode_island_ctc.png",
     size: "medium",
   },
   {
@@ -129,6 +109,52 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/myfriendben-nc",
     linkText: "Read more",
     image: "/2025-year-in-review/images/MyFriendBenLogo_nc.png",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
+    title: "SALTernative",
+    description:
+      "Simulate SALT deduction reforms with current-law vs. current-policy baselines and CBO behavioral responses as TCJA expires.",
+    link: "https://policyengine.org/us/salternative",
+    linkText: "Try it",
+    image: "/2025-year-in-review/images/SALTernative.jpg",
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "Illinois Benefit Hub",
+    description:
+      "New benefits screening platform helps Illinois residents identify public assistance programs using PolicyEngine's API.",
+    link: "https://policyengine.org/us/research/illinois-benefit-hub",
+    linkText: "Read more",
+    size: "medium",
+  },
+  {
+    tag: "Funding",
+    title: "Pritzker Children's Initiative Grant",
+    description:
+      "Grant supports building a child poverty dashboard, expanding TANF and childcare subsidy modeling to all 50 states.",
+    link: "https://policyengine.org/us/research/pritzker-childrens-initiative-grant",
+    linkText: "Read more",
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "USC Research Collaboration",
+    description:
+      "Supporting Matt Unrath's research analyzing effective marginal and average tax rates using PolicyEngine.",
+    link: "https://policyengine.org/us/research/policyengine-usc-collaboration",
+    linkText: "Read more",
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "Better Government Lab",
+    description:
+      "Providing technical guidance and modeling expertise for research on benefit program takeup.",
+    link: "https://policyengine.org/us/research/policyengine-better-government-lab-collaboration",
+    linkText: "Read more",
     size: "medium",
   },
 ];
