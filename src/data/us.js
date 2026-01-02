@@ -92,11 +92,12 @@ export const usHighlights = [
   },
   {
     tag: "New Tool",
-    title: "ACA Premium Calculator",
+    title: "ACA Reform Calculator",
     description:
       "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
     link: "https://policyengine.org/us/aca-calc",
     linkText: "Calculate credits",
+    image: "/2025-year-in-review/images/aca-reform-calculator.png",
     size: "medium",
   },
   {
@@ -106,7 +107,6 @@ export const usHighlights = [
       "Released comprehensive microdata integrating CPS with IRS data for more accurate policy analysis.",
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
-    image: "/2025-year-in-review/images/us-data.png",
     size: "medium",
   },
   {
@@ -227,7 +227,7 @@ export const usTimeline = [
   },
   {
     date: "October 2025",
-    title: "ACA Calculator Launch",
+    title: "ACA Reform Calculator Launch",
     description:
       "Interactive tool comparing enhanced vs. original ACA subsidy schedules ahead of 2025 expiration.",
     link: "https://policyengine.org/us/research/introducing-aca-calc",
