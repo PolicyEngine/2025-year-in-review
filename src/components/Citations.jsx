@@ -119,13 +119,13 @@ export default function Citations({ country = "us" }) {
           color="#F97316"
         />
         <CitationSection
-          title="Publications"
-          items={data.publications}
+          title="Citations"
+          items={data.citations}
           color="#8B5CF6"
         />
         <CitationSection
-          title="Research Partners"
-          items={data.research_partners}
+          title="Collaborations"
+          items={data.collaborations}
           color="#EAB308"
         />
         <CitationSection

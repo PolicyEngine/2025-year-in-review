@@ -17,7 +17,7 @@ us:
       type: podcast
       icon: mic
 
-  publications:
+  citations:
     - outlet: People's Policy Project
       author: David Trimmer
       title: "Rep. Tlaib's Economic Dignity for All Agenda"
@@ -33,7 +33,7 @@ us:
       url: https://www.aei.org/articles/an-analysis-of-gubernatorial-candidate-ethan-penners-tax-reform-proposal/
       icon: newspaper
 
-  research_partners:
+  collaborations:
     - org: Niskanen Center
       title: Child Tax Credit Reform Analysis
       description: First external org to use PolicyEngine's enhanced microdata
