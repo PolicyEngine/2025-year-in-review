@@ -51,6 +51,16 @@ export const usHighlights = [
     size: "medium",
   },
   {
+    tag: "Funding",
+    title: "Arnold Ventures Grant",
+    description:
+      "Awarded $249K grant for state and congressional district-level breakdowns, enabling policymakers to see how reforms affect all 435 districts.",
+    link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
+    linkText: "Learn more",
+    image: "/2025-year-in-review/images/Arnold-Ventures-Logo.png",
+    size: "medium",
+  },
+  {
     tag: "Partnership",
     title: "NBER TAXSIM Integration",
     description:
@@ -177,6 +187,13 @@ export const usTimeline = [
   },
   {
     date: "April 2025",
+    title: "Arnold Ventures Grant",
+    description:
+      "Awarded $249K grant for state and congressional district-level breakdowns in PolicyEngine US.",
+    link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
+  },
+  {
+    date: "April 2025",
     title: "SALTernative Launch",
     description:
       "New tool for simulating SALT deduction reforms with behavioral responses ahead of TCJA expiration.",
@@ -299,8 +316,8 @@ export const usPartners = [
   {
     name: "Arnold Ventures",
     description:
-      "Supporting evidence-based policy research and open-source development.",
-    link: "https://www.arnoldventures.org",
+      "Funding state and congressional district-level policy analysis to inform TCJA reform debates.",
+    link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
   },
   {
     name: "MyFriendBen",
