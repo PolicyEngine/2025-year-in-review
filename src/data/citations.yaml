@@ -92,12 +92,6 @@ us:
       url: https://tlaib.house.gov/posts/tlaib-introduces-economic-dignity-for-all-agenda-to-tackle-affordability-crisis
       icon: landmark
 
-    - entity: DC Council
-      title: District Child Tax Credit
-      description: Councilmember Zachary Parker cited PolicyEngine poverty analysis
-      url: https://dcgicoalition.org/restore-the-district-child-tax-credit/
-      icon: landmark
-
     - entity: NY State Senate
       title: Working Families Tax Credit
       description: Senator Andrew Gounardes cited PolicyEngine analysis
