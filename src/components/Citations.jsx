@@ -119,14 +119,9 @@ export default function Citations({ country = "us" }) {
           color="#F97316"
         />
         <CitationSection
-          title="Citations"
-          items={data.citations}
+          title="Citations & Collaborations"
+          items={[...(data.citations || []), ...(data.collaborations || [])]}
           color="#8B5CF6"
-        />
-        <CitationSection
-          title="Collaborations"
-          items={data.collaborations}
-          color="#EAB308"
         />
         <CitationSection
           title="Government Citations"
