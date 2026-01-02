@@ -71,16 +71,6 @@ export const usHighlights = [
     size: "medium",
   },
   {
-    tag: "Partnership",
-    title: "Atlanta Fed PRD Validation",
-    description:
-      "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
-    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
-    linkText: "Read more",
-    image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
-    size: "medium",
-  },
-  {
     tag: "New Tool",
     title: "GiveCalc 2.0",
     description:
@@ -88,6 +78,16 @@ export const usHighlights = [
     image: "/2025-year-in-review/images/givecalc_demo_2.png",
     link: "https://givecalc.org",
     linkText: "Calculate savings",
+    size: "medium",
+  },
+  {
+    tag: "Partnership",
+    title: "Atlanta Fed PRD Validation",
+    description:
+      "Signed MOU with the Federal Reserve Bank of Atlanta integrating their Policy Rules Database into our validation infrastructure.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
+    linkText: "Read more",
+    image: "/2025-year-in-review/images/atl_fed_logo_2.jpg",
     size: "medium",
   },
   {
