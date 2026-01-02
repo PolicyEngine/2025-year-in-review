@@ -101,6 +101,51 @@ export const ukHighlights = [
     linkText: "Watch on YouTube",
     size: "medium",
   },
+  {
+    tag: "Funding",
+    title: "Nuffield Foundation Grant",
+    description:
+      "Awarded £250,000 to expand and localise UK tax-benefit microsimulation capabilities.",
+    link: "https://policyengine.org/uk/research/uk-nuffield-grant",
+    linkText: "Learn more",
+    size: "medium",
+  },
+  {
+    tag: "Documentation",
+    title: "UK Benefits Guide",
+    description:
+      "Comprehensive documentation of all benefits modeled in PolicyEngine UK, including means-tested and non-means-tested programs.",
+    link: "https://policyengine.org/uk/research/uk-benefits-post",
+    linkText: "Read guide",
+    size: "medium",
+  },
+  {
+    tag: "Documentation",
+    title: "UK Taxes Guide",
+    description:
+      "Complete documentation of tax components modeled in PolicyEngine UK, including direct taxes, indirect taxes, and proposed taxes.",
+    link: "https://policyengine.org/uk/research/uk-taxes-post",
+    linkText: "Read guide",
+    size: "medium",
+  },
+  {
+    tag: "Technology",
+    title: "AI Household Explainer",
+    description:
+      "New feature using large language models to help users understand how taxes and benefits affect their household.",
+    link: "https://policyengine.org/uk/research/uk-household-ai",
+    linkText: "Learn more",
+    size: "medium",
+  },
+  {
+    tag: "Technology",
+    title: "Multi-Agent AI Workflows",
+    description:
+      "Testing Claude Code multi-agent systems for policy research, informing our open-source plugin development.",
+    link: "https://policyengine.org/uk/research/multi-agent-workflows-policy-research",
+    linkText: "Read more",
+    size: "medium",
+  },
 ];
 
 // Individual Autumn Budget 2025 provisions for detailed display
@@ -149,6 +194,20 @@ export const autumnBudgetProvisions = [
 
 export const ukTimeline = [
   {
+    date: "December 2024",
+    title: "Nuffield Foundation Grant",
+    description:
+      "Awarded £250,000 to expand and localise UK tax-benefit microsimulation capabilities.",
+    link: "https://policyengine.org/uk/research/uk-nuffield-grant",
+  },
+  {
+    date: "December 2024",
+    title: "AI Household Explainer",
+    description:
+      "Launched AI-powered feature helping users understand how policies affect their household.",
+    link: "https://policyengine.org/uk/research/uk-household-ai",
+  },
+  {
     date: "February 2025",
     title: "API Improvements",
     description: "Major architecture evolution supporting UK and US models.",
@@ -156,10 +215,24 @@ export const ukTimeline = [
   },
   {
     date: "April 2025",
+    title: "UK Taxes Documentation",
+    description:
+      "Published comprehensive guide to all tax components modeled in PolicyEngine UK.",
+    link: "https://policyengine.org/uk/research/uk-taxes-post",
+  },
+  {
+    date: "April 2025",
     title: "April Tax Changes Take Effect",
     description:
       "Analysis of employer NI increase, CGT reforms, private school VAT, and fuel duty changes.",
     link: "https://policyengine.org/uk/research/impact-of-tax-changes-2025-2026",
+  },
+  {
+    date: "May 2025",
+    title: "UK Benefits Documentation",
+    description:
+      "Published comprehensive guide to all benefits modeled in PolicyEngine UK.",
+    link: "https://policyengine.org/uk/research/uk-benefits-post",
   },
   {
     date: "May 2025",
@@ -181,6 +254,13 @@ export const ukTimeline = [
     description:
       "Synthetic firm microdata analysis of how VAT threshold changes affect revenues.",
     link: "https://policyengine.org/uk/research/uk-vat-thresholds",
+  },
+  {
+    date: "October 2025",
+    title: "Multi-Agent AI Research",
+    description:
+      "Testing Claude Code multi-agent systems for automated policy analysis workflows.",
+    link: "https://policyengine.org/uk/research/multi-agent-workflows-policy-research",
   },
   {
     date: "November 2025",
