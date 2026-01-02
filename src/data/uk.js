@@ -1,23 +1,18 @@
 export const ukStats = [
   {
-    number: 9623,
-    label: "Commits",
-    detail: "Across 43 active repositories in 2025",
-  },
-  {
     number: 9,
     label: "Budget Provisions",
     detail: "Modeled in our Autumn Budget 2025 dashboard",
   },
   {
-    number: 27,
-    label: "New Repos",
-    detail: "New projects launched in 2025",
+    number: 11,
+    label: "Training Sessions",
+    detail: "Video tutorials on our YouTube channel",
   },
   {
-    number: 576,
-    label: "UK Model Commits",
-    detail: "To policyengine-uk alone",
+    number: 650,
+    label: "Constituencies",
+    detail: "Local-level policy impact analysis across the UK",
   },
 ];
 

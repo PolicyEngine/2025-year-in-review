@@ -112,7 +112,7 @@ function YearInReview() {
       {country === "us" && <StateCoverageMap />}
       <Partners partners={partners} />
       <Timeline timeline={timeline} country={country} />
-      <SoftwareDev />
+      <SoftwareDev country={country} />
       <Footer />
     </>
   );

@@ -19,7 +19,7 @@ function StatCard({ value, label, icon }) {
   );
 }
 
-export default function SoftwareDev() {
+export default function SoftwareDev({ country = "us" }) {
   return (
     <section className="software-dev-section">
       <div className="software-dev-container">
@@ -52,17 +52,6 @@ export default function SoftwareDev() {
             }
           />
           <StatCard
-            value={GITHUB_STATS.commits}
-            label="Commits"
-            icon={
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="12" r="4" />
-                <line x1="1.05" y1="12" x2="7" y2="12" />
-                <line x1="17.01" y1="12" x2="22.96" y2="12" />
-              </svg>
-            }
-          />
-          <StatCard
             value={GITHUB_STATS.prs}
             label="Pull Requests"
             icon={
@@ -88,23 +77,65 @@ export default function SoftwareDev() {
           />
         </div>
 
-        <a
-          href="https://policyengine.github.io/github-wrapped/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="wrapped-cta"
-        >
-          <span className="wrapped-cta-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-            </svg>
-          </span>
-          <span className="wrapped-cta-text">
-            <strong>View GitHub Wrapped</strong>
-            <span>See individual contributor stats</span>
-          </span>
-          <span className="wrapped-cta-arrow">→</span>
-        </a>
+        <div className="cta-grid">
+          <a
+            href="https://policyengine.github.io/github-wrapped/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wrapped-cta"
+          >
+            <span className="wrapped-cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </span>
+            <span className="wrapped-cta-text">
+              <strong>View GitHub Wrapped</strong>
+              <span>See individual contributor stats</span>
+            </span>
+            <span className="wrapped-cta-arrow">→</span>
+          </a>
+
+          <a
+            href="https://github.com/PolicyEngine/policyengine-claude"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="wrapped-cta"
+          >
+            <span className="wrapped-cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </span>
+            <span className="wrapped-cta-text">
+              <strong>Claude Code Plugin</strong>
+              <span>AI-powered policy development tools</span>
+            </span>
+            <span className="wrapped-cta-arrow">→</span>
+          </a>
+
+          {country === "uk" && (
+            <a
+              href="https://www.youtube.com/@policyengine"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wrapped-cta"
+            >
+              <span className="wrapped-cta-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+              </span>
+              <span className="wrapped-cta-text">
+                <strong>Training Sessions</strong>
+                <span>11 video tutorials on YouTube</span>
+              </span>
+              <span className="wrapped-cta-arrow">→</span>
+            </a>
+          )}
+        </div>
       </div>
     </section>
   );
