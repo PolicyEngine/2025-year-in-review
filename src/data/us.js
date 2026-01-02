@@ -82,13 +82,21 @@ export const usHighlights = [
   },
   {
     tag: "New Tool",
+    title: "GiveCalc 2.0",
+    description:
+      "Standalone calculator at givecalc.org showing true cost of charitable giving across all 50 states, DC, and NYC.",
+    image: "/2025-year-in-review/images/givecalc_demo_2.png",
+    link: "https://givecalc.org",
+    linkText: "Calculate savings",
+    size: "medium",
+  },
+  {
+    tag: "New Tool",
     title: "ACA Premium Calculator",
     description:
       "Compare enhanced versus original ACA subsidy schedules for any household configuration as credits expire at end of 2025.",
     link: "https://policyengine.org/us/aca-calc",
     linkText: "Calculate credits",
-    image:
-      "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/aca-calc-screenshot.jpg",
     size: "medium",
   },
   {
@@ -99,16 +107,6 @@ export const usHighlights = [
     link: "https://policyengine.org/us/research/enhanced-cps-launch",
     linkText: "Explore",
     image: "/2025-year-in-review/images/us-data.png",
-    size: "medium",
-  },
-  {
-    tag: "New Tool",
-    title: "GiveCalc 2.0",
-    description:
-      "Standalone calculator at givecalc.org showing true cost of charitable giving across all 50 states, DC, and NYC.",
-    image: "/2025-year-in-review/images/givecalc_demo_2.png",
-    link: "https://givecalc.org",
-    linkText: "Calculate savings",
     size: "medium",
   },
   {
