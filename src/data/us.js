@@ -235,6 +235,13 @@ export const usTimeline = [
     link: "https://policyengine.org/us/research/introducing-aca-calc",
   },
   {
+    date: "October 2025",
+    title: "Illinois Benefit Hub Launch",
+    description:
+      "New benefits screening platform helps Illinois residents identify public assistance programs using PolicyEngine's API.",
+    link: "https://policyengine.org/us/research/illinois-benefit-hub",
+  },
+  {
     date: "November 2025",
     title: "NTA Conference",
     description:
