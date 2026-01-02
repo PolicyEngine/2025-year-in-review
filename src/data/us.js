@@ -54,7 +54,7 @@ export const usHighlights = [
     tag: "Funding",
     title: "Arnold Ventures Grant",
     description:
-      "Awarded $249K grant for state and congressional district-level breakdowns, enabling policymakers to see how reforms affect all 435 districts.",
+      "Awarded $274K grant for state and congressional district-level breakdowns, enabling policymakers to see how reforms affect all 435 districts.",
     link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
     linkText: "Learn more",
     image: "/2025-year-in-review/images/Arnold-Ventures-Logo.png",
@@ -187,17 +187,17 @@ export const usTimeline = [
   },
   {
     date: "April 2025",
-    title: "Arnold Ventures Grant",
-    description:
-      "Awarded $249K grant for state and congressional district-level breakdowns in PolicyEngine US.",
-    link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
-  },
-  {
-    date: "April 2025",
     title: "SALTernative Launch",
     description:
       "New tool for simulating SALT deduction reforms with behavioral responses ahead of TCJA expiration.",
     link: "https://policyengine.org/us/salternative",
+  },
+  {
+    date: "July 2025",
+    title: "Arnold Ventures Grant",
+    description:
+      "Awarded $274K grant for state and congressional district-level breakdowns in PolicyEngine US.",
+    link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
   },
   {
     date: "July 2025",
@@ -316,7 +316,7 @@ export const usPartners = [
   {
     name: "Arnold Ventures",
     description:
-      "Funding state and congressional district-level policy analysis to inform TCJA reform debates.",
+      "$274K grant for state and congressional district-level policy analysis.",
     link: "https://policyengine.org/us/research/arnold-ventures-congressional-districts-grant",
   },
   {
