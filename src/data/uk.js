@@ -48,13 +48,13 @@ export const ukHighlights = [
     size: "medium",
   },
   {
-    tag: "New Tool",
+    tag: "Major Launch",
     title: "Local Areas Dashboard",
     description:
-      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+      "Explore policy impacts across all 650 constituencies and 300+ local authorities. See how reforms affect poverty, inequality, and tax burdens in your area.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
-    linkText: "Explore",
-    size: "medium",
+    linkText: "Explore your area",
+    size: "large",
   },
   {
     tag: "Political Analysis",
@@ -287,7 +287,7 @@ export const ukTimeline = [
     date: "December 2025",
     title: "Local Areas Dashboard",
     description:
-      "Interactive dashboard exploring policy impacts at the local authority level across the UK.",
+      "Major launch: policy simulation for all 650 constituencies and 300+ local authorities.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
   },
   {
