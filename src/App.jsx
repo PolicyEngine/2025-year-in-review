@@ -69,7 +69,15 @@ function CountryToggle({ country }) {
 
 function YearInReview() {
   const { countryId } = useParams();
-  const country = COUNTRY_CODES.includes(countryId) ? countryId : "us";
+  const [searchParams] = useSearchParams();
+
+  // Check query param first (for embedding), then URL path
+  const countryParam = searchParams.get("country");
+  const country = COUNTRY_CODES.includes(countryParam)
+    ? countryParam
+    : COUNTRY_CODES.includes(countryId)
+      ? countryId
+      : "us";
 
   const stats = country === "us" ? usStats : ukStats;
   const highlights = country === "us" ? usHighlights : ukHighlights;
