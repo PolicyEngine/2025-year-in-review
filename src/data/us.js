@@ -207,6 +207,20 @@ export const usTimeline = [
     link: "https://blog.policyengine.org/introducing-the-obbba-household-explorer-4782a90ce7bc",
   },
   {
+    date: "August 2025",
+    title: "Academic Research Partnerships",
+    description:
+      "Partnered with Better Government Lab (Georgetown) and USC on benefit takeup and marginal tax rate research.",
+    link: "https://policyengine.org/us/research/policyengine-better-government-lab-collaboration",
+  },
+  {
+    date: "October 2025",
+    title: "Atlanta Fed MOU",
+    description:
+      "Signed MOU with Federal Reserve Bank of Atlanta for Policy Rules Database validation.",
+    link: "https://policyengine.org/us/research/policyengine-atlanta-fed-mou-prd",
+  },
+  {
     date: "October 2025",
     title: "DC Office Launch",
     description:
