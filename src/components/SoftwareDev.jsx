@@ -19,7 +19,7 @@ function StatCard({ value, label, icon }) {
   );
 }
 
-export default function SoftwareDev({ country = "us" }) {
+export default function SoftwareDev() {
   return (
     <section className="software-dev-section">
       <div className="software-dev-container">
@@ -115,26 +115,6 @@ export default function SoftwareDev({ country = "us" }) {
             </span>
             <span className="wrapped-cta-arrow">→</span>
           </a>
-
-          {country === "uk" && (
-            <a
-              href="https://www.youtube.com/@policyengine"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="wrapped-cta"
-            >
-              <span className="wrapped-cta-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polygon points="5 3 19 12 5 21 5 3" />
-                </svg>
-              </span>
-              <span className="wrapped-cta-text">
-                <strong>Training Sessions</strong>
-                <span>11 video tutorials on YouTube</span>
-              </span>
-              <span className="wrapped-cta-arrow">→</span>
-            </a>
-          )}
         </div>
       </div>
     </section>

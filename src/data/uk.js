@@ -92,7 +92,16 @@ export const ukHighlights = [
     linkText: "Read analysis",
     size: "medium",
   },
-  ];
+  {
+    tag: "Training",
+    title: "Video Training Series",
+    description:
+      "11 training sessions covering PolicyEngine basics, advanced features, and policy analysis techniques.",
+    link: "https://www.youtube.com/@policyengine",
+    linkText: "Watch on YouTube",
+    size: "medium",
+  },
+];
 
 // Individual Autumn Budget 2025 provisions for detailed display
 export const autumnBudgetProvisions = [
