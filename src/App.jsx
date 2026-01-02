@@ -131,7 +131,7 @@ function RedirectToCountry() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/2025-year-in-review">
       <Routes>
         <Route path="/" element={<RedirectToCountry />} />
         <Route path="/:countryId" element={<YearInReview />} />
