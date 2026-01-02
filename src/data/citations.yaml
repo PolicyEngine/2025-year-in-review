@@ -26,13 +26,6 @@ us:
       date: 2025-11-20
       icon: newspaper
 
-    - outlet: Jacobin
-      author: David Trimmer
-      title: "Rashida Tlaib's End Child Poverty Act"
-      description: Analysis showing dramatic child poverty and inequality reduction
-      url: https://jacobin.com/author/david-trimmer
-      icon: newspaper
-
     - outlet: American Enterprise Institute
       author: Kyle Pomerleau
       title: California Tax Analysis
@@ -65,7 +58,6 @@ us:
     - org: CRFB
       title: Social Security Taxation
       description: Analysis of Social Security benefit taxation reforms
-      url: https://policyengine.github.io/crfb-tob-impacts/dashboard/
       icon: building
 
   api_customers:
