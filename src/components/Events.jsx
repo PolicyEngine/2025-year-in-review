@@ -16,6 +16,11 @@ export default function Events({ events, title = "Events & Presentations" }) {
               <h3 className="event-title">{event.title}</h3>
               <div className="event-location">{event.location}</div>
               <p className="event-description">{event.description}</p>
+              {event.link && (
+                <a href={event.link} target="_blank" rel="noopener noreferrer" className="event-link">
+                  Watch recording →
+                </a>
+              )}
             </div>
           ))}
         </div>

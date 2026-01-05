@@ -313,5 +313,6 @@ export const ukEvents = [
     location: "Central Hall Westminster, London",
     description:
       "Flagship event with live demos, research presentations, and panel discussions.",
+    link: "https://www.youtube.com/watch?v=3qXgaqo3ftU",
   },
 ];

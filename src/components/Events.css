@@ -79,6 +79,20 @@
   margin: 0;
 }
 
+.event-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--pe-teal-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.event-link:hover {
+  color: var(--pe-teal-500);
+}
+
 @media (max-width: 768px) {
   .events-section {
     padding: 60px 16px;
