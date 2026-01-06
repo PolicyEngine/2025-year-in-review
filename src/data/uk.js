@@ -1,8 +1,8 @@
 export const ukStats = [
   {
-    number: 1032,
+    number: 1010,
     label: "Local Areas",
-    detail: "Constituencies and local authorities modelled",
+    detail: "650 constituencies + 360 local authorities modelled",
   },
   {
     number: 38,
