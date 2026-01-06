@@ -19,7 +19,7 @@ export const ukStats = [
 export const ukHighlights = [
   {
     tag: "Major Launch",
-    title: "Autumn Budget 2025 Dashboard",
+    title: "Autumn Budget 2025 dashboard",
     description:
       "Interactive dashboard exploring how all nine budget provisions interact. Compare impacts by income decile, constituency, and year through 2030-31.",
     link: "https://policyengine.org/uk/autumn-budget-2025",
@@ -49,16 +49,16 @@ export const ukHighlights = [
   },
   {
     tag: "Major Launch",
-    title: "Local Areas Dashboard",
+    title: "Local areas dashboard",
     description:
-      "Explore policy impacts across all 650 constituencies and 300+ local authorities. See how reforms affect poverty, inequality, and tax burdens in your area.",
+      "View income, taxes, benefits, and more across all 650 constituencies and 398 local authorities.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
     linkText: "Explore your area",
     size: "large",
   },
   {
     tag: "New Tool",
-    title: "Public Services Spending Dashboard",
+    title: "Public services spending dashboard",
     description:
       "Explore how public spending on healthcare, education, transport and other services varies by income level.",
     link: "https://www.policyengine.org/uk/public-services-spending",
@@ -67,7 +67,7 @@ export const ukHighlights = [
   },
   {
     tag: "Political Analysis",
-    title: "Reform UK Manifesto",
+    title: "Reform UK manifesto",
     description:
       "Analysis of Nigel Farage's four tax-benefit reforms and their £75 billion fiscal impact.",
     link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
@@ -85,7 +85,7 @@ export const ukHighlights = [
   },
   {
     tag: "Research",
-    title: "VAT Threshold Analysis",
+    title: "VAT threshold analysis",
     description:
       "Using synthetic firm microdata to analyse how VAT threshold changes affect revenues and businesses.",
     link: "https://policyengine.org/uk/research/uk-vat-thresholds",
@@ -112,7 +112,7 @@ export const ukHighlights = [
   },
   {
     tag: "Funding",
-    title: "Nuffield Foundation Grant",
+    title: "Nuffield Foundation grant",
     description:
       "Awarded £250,000 to expand and localise UK tax-benefit microsimulation capabilities.",
     link: "https://policyengine.org/uk/research/uk-nuffield-grant",
@@ -204,7 +204,7 @@ export const autumnBudgetProvisions = [
 export const ukTimeline = [
   {
     date: "December 2024",
-    title: "Nuffield Foundation Grant",
+    title: "Nuffield Foundation grant",
     description:
       "Awarded £250,000 to expand and localise UK tax-benefit microsimulation capabilities.",
     link: "https://policyengine.org/uk/research/uk-nuffield-grant",
@@ -245,21 +245,21 @@ export const ukTimeline = [
   },
   {
     date: "May 2025",
-    title: "Reform UK Analysis",
+    title: "Reform UK analysis",
     description:
       "Comprehensive cost analysis showing £75 billion fiscal impact of Farage's manifesto proposals.",
     link: "https://policyengine.org/uk/research/reform-uks-emergency-recovery-plan",
   },
   {
     date: "October 2025",
-    title: "Carbon Tax & Dividend Study",
+    title: "Carbon tax & dividend study",
     description:
       "Analysis showing 71% of UK residents gain income under carbon pricing with equal dividends.",
     link: "https://policyengine.org/uk/research/uk-carbon-tax-dividend",
   },
   {
     date: "October 2025",
-    title: "VAT Threshold Analysis",
+    title: "VAT threshold analysis",
     description:
       "Synthetic firm microdata analysis of how VAT threshold changes affect revenues.",
     link: "https://policyengine.org/uk/research/uk-vat-thresholds",
@@ -287,16 +287,16 @@ export const ukTimeline = [
   },
   {
     date: "December 2025",
-    title: "Autumn Budget Dashboard",
+    title: "Autumn Budget dashboard",
     description:
       "Interactive tool for exploring budget provision impacts through 2030-31.",
     link: "https://policyengine.org/uk/autumn-budget-2025",
   },
   {
     date: "December 2025",
-    title: "Local Areas Dashboard",
+    title: "Local areas dashboard",
     description:
-      "Major launch: policy simulation for all 650 constituencies and 300+ local authorities.",
+      "View income, taxes, benefits, and more across all 650 constituencies and 398 local authorities.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
   },
   {
@@ -308,7 +308,7 @@ export const ukTimeline = [
   },
   {
     date: "December 2025",
-    title: "Public Services Spending Dashboard",
+    title: "Public services spending dashboard",
     description:
       "New tool exploring how public spending on healthcare, education, and other services varies by income.",
     link: "https://www.policyengine.org/uk/public-services-spending",
