@@ -1,18 +1,18 @@
 export const ukStats = [
   {
+    number: 1032,
+    label: "Local Areas",
+    detail: "Constituencies and local authorities modelled",
+  },
+  {
     number: 38,
     label: "Reports & Trainings",
     detail: "New UK content published in 2025",
   },
   {
-    number: 1032,
-    label: "Local Areas",
-    detail: "Constituencies and local authorities modeled",
-  },
-  {
     number: 9,
     label: "Budget Provisions",
-    detail: "Modeled in our Autumn Budget 2025 dashboard",
+    detail: "Modelled in our Autumn Budget 2025 dashboard",
   },
 ];
 
@@ -32,7 +32,7 @@ export const ukHighlights = [
     tag: "Major Event",
     title: "PolicyEngine 2.0 Launch",
     description:
-      "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modeling.",
+      "Exclusive showcase at Central Hall Westminster featuring live demos, constituency-level policy impacts, AI-powered analysis tools, and panels on the future of economic policy modelling.",
     link: "https://policyengine.org/uk/research/sep-2025-london-event",
     linkText: "Event recap",
     image: "/2025-year-in-review/images/policyengine_2.0.png",
@@ -123,7 +123,7 @@ export const ukHighlights = [
     tag: "Documentation",
     title: "UK Benefits Guide",
     description:
-      "Comprehensive documentation of all benefits modeled in PolicyEngine UK, including means-tested and non-means-tested programs.",
+      "Comprehensive documentation of all benefits modelled in PolicyEngine UK, including means-tested and non-means-tested programs.",
     link: "https://policyengine.org/uk/research/uk-benefits-post",
     linkText: "Read guide",
     size: "medium",
@@ -132,7 +132,7 @@ export const ukHighlights = [
     tag: "Documentation",
     title: "UK Taxes Guide",
     description:
-      "Complete documentation of tax components modeled in PolicyEngine UK, including direct taxes, indirect taxes, and proposed taxes.",
+      "Complete documentation of tax components modelled in PolicyEngine UK, including direct taxes, indirect taxes, and proposed taxes.",
     link: "https://policyengine.org/uk/research/uk-taxes-post",
     linkText: "Read guide",
     size: "medium",
@@ -226,7 +226,7 @@ export const ukTimeline = [
     date: "April 2025",
     title: "UK Taxes Documentation",
     description:
-      "Published comprehensive guide to all tax components modeled in PolicyEngine UK.",
+      "Published comprehensive guide to all tax components modelled in PolicyEngine UK.",
     link: "https://policyengine.org/uk/research/uk-taxes-post",
   },
   {
@@ -240,7 +240,7 @@ export const ukTimeline = [
     date: "May 2025",
     title: "UK Benefits Documentation",
     description:
-      "Published comprehensive guide to all benefits modeled in PolicyEngine UK.",
+      "Published comprehensive guide to all benefits modelled in PolicyEngine UK.",
     link: "https://policyengine.org/uk/research/uk-benefits-post",
   },
   {
