@@ -5,7 +5,7 @@ export const ukStats = [
     detail: "New UK content published in 2025",
   },
   {
-    number: "1,032",
+    number: 1032,
     label: "Local Areas",
     detail: "Constituencies and local authorities modeled",
   },
