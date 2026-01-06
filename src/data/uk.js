@@ -1,18 +1,18 @@
 export const ukStats = [
   {
+    number: 38,
+    label: "Reports & Trainings",
+    detail: "New UK content published in 2025",
+  },
+  {
+    number: "1,032",
+    label: "Local Areas",
+    detail: "Constituencies and local authorities modeled",
+  },
+  {
     number: 9,
     label: "Budget Provisions",
     detail: "Modeled in our Autumn Budget 2025 dashboard",
-  },
-  {
-    number: 11,
-    label: "Training Sessions",
-    detail: "Video tutorials on our YouTube channel",
-  },
-  {
-    number: 650,
-    label: "Constituencies",
-    detail: "Local-level policy impact analysis across the UK",
   },
 ];
 
@@ -55,6 +55,15 @@ export const ukHighlights = [
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
     linkText: "Explore your area",
     size: "large",
+  },
+  {
+    tag: "New Tool",
+    title: "Public Services Spending Dashboard",
+    description:
+      "Explore how public spending on healthcare, education, transport and other services varies by income level.",
+    link: "https://www.policyengine.org/uk/public-services-spending",
+    linkText: "View dashboard",
+    size: "medium",
   },
   {
     tag: "Political Analysis",
@@ -296,6 +305,13 @@ export const ukTimeline = [
     description:
       "Free calculator showing how Gift Aid affects taxes and the true cost of giving.",
     link: "https://givecalc.org",
+  },
+  {
+    date: "December 2025",
+    title: "Public Services Spending Dashboard",
+    description:
+      "New tool exploring how public spending on healthcare, education, and other services varies by income.",
+    link: "https://www.policyengine.org/uk/public-services-spending",
   },
 ];
 
