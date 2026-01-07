@@ -51,7 +51,7 @@ export const ukHighlights = [
     tag: "Major Launch",
     title: "Local areas dashboard",
     description:
-      "View income, taxes, benefits, and more across all 650 constituencies and 398 local authorities.",
+      "View income, taxes, benefits, and more across all 650 constituencies and 360 local authorities.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
     linkText: "Explore your area",
     size: "large",
@@ -296,7 +296,7 @@ export const ukTimeline = [
     date: "December 2025",
     title: "Local areas dashboard",
     description:
-      "View income, taxes, benefits, and more across all 650 constituencies and 398 local authorities.",
+      "View income, taxes, benefits, and more across all 650 constituencies and 360 local authorities.",
     link: "https://www.policyengine.org/uk/local-areas-dashboard",
   },
   {
