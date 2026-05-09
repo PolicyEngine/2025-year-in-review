@@ -1,3 +1,5 @@
+'use client';
+
 import './Events.css';
 
 export default function Events({ events, title = "Events & Presentations" }) {
