@@ -1,3 +1,5 @@
+'use client';
+
 import './Hero.css';
 
 export default function Hero({ country = 'us' }) {

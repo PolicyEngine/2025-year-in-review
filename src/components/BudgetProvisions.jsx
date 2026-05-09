@@ -1,3 +1,5 @@
+'use client';
+
 import './BudgetProvisions.css';
 
 function ProvisionCard({ provision, index }) {

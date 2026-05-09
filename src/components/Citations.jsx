@@ -1,8 +1,7 @@
-import citationsData from "../data/citations.yaml?raw";
-import YAML from "yaml";
-import "./Citations.css";
+'use client';
 
-const parsedData = YAML.parse(citationsData);
+import parsedData from "../data/citations.json";
+import "./Citations.css";
 
 const ICONS = {
   radio: (

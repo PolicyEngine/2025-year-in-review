@@ -1,3 +1,5 @@
+'use client';
+
 import "./ImpactMetrics.css";
 
 export default function ImpactMetrics({

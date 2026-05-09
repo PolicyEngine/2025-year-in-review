@@ -1,3 +1,5 @@
+'use client';
+
 import "./SoftwareDev.css";
 
 // Stats from github-wrapped data (fetched Dec 31, 2025)

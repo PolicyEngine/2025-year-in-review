@@ -1,3 +1,5 @@
+'use client';
+
 import './Timeline.css';
 
 export default function Timeline({ timeline, country }) {

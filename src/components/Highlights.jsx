@@ -1,3 +1,5 @@
+'use client';
+
 import './Highlights.css';
 
 function HighlightCard({ highlight }) {

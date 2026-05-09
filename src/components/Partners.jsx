@@ -1,3 +1,5 @@
+'use client';
+
 import './Partners.css';
 
 export default function Partners({ partners, title = "Partners & Collaborations" }) {

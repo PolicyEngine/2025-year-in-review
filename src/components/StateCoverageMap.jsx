@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useRef, useCallback } from "react";
 import {
   ComposableMap,
@@ -6,12 +8,8 @@ import {
   Marker,
   ZoomableGroup,
 } from "react-simple-maps";
-import engagementsData from "../data/engagements.yaml?raw";
-import YAML from "yaml";
+import parsedData from "../data/engagements.json";
 import "./StateCoverageMap.css";
-
-// Parse YAML data
-const parsedData = YAML.parse(engagementsData);
 const stateEngagements = parsedData.us;
 const internationalEngagements = parsedData.international;
 
