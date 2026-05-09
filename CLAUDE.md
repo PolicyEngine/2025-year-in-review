@@ -55,7 +55,7 @@
 
 ### Technical Debt
 1. **Type safety**: Consider adding TypeScript for data files
-2. **Component tests**: No tests currently - add Jest/Vitest tests
+2. **Component tests**: No tests currently - add tests using Next.js testing tools (Jest + React Testing Library)
 3. **Storybook**: Could help with component documentation
 4. **CSS organization**: Some duplicate styles across component CSS files
 
@@ -71,8 +71,8 @@ bun dev
 # Build for production
 bun run build
 
-# Preview production build
-bun run preview
+# Start production server
+bun start
 ```
 
 ## URL Structure
@@ -84,9 +84,9 @@ bun run preview
 
 ## Deployment
 
-Currently deployed to GitHub Pages. Build creates `dist/` folder.
+Built with Next.js 16 App Router. Build creates `.next/` folder for server deployment or `out/` folder for static export.
 
-The `vite.config.js` should have `base: '/2025-year-in-review/'` for GitHub Pages deployment.
+For static deployment (e.g., GitHub Pages), configure `output: 'export'` in `next.config.ts` with `basePath: '/2025-year-in-review'`.
 
 ## Known Issues
 
