@@ -84,9 +84,8 @@ bun start
 
 ## Deployment
 
-Built with Next.js 16 App Router. Build creates `.next/` folder for server deployment or `out/` folder for static export.
-
-For static deployment (e.g., GitHub Pages), configure `output: 'export'` in `next.config.ts` with `basePath: '/2025-year-in-review'`.
+Built with Next.js 16 App Router and deployed through Vercel. The app is served
+on policyengine.org through the PolicyEngine multizone rewrites.
 
 ## Known Issues
 

@@ -62,4 +62,5 @@ Build for production:
 bun run build
 ```
 
-Deploy the `dist/` folder to any static hosting (GitHub Pages, Vercel, Netlify).
+Deploy through Vercel. The app is served on policyengine.org through the
+PolicyEngine multizone rewrites.
