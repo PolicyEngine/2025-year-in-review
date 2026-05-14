@@ -2,7 +2,6 @@
 
 import { Suspense, use } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Header as PolicyEngineHeader } from '@policyengine/ui-kit/layout';
 import Hero from '@/components/Hero';
 import Stats from '@/components/Stats';
 import Highlights from '@/components/Highlights';
@@ -28,30 +27,6 @@ import {
 } from '@/data/uk';
 
 const COUNTRY_CODES = ['us', 'uk'];
-const PE_COUNTRIES = [
-  { id: 'us', label: 'United States' },
-  { id: 'uk', label: 'United Kingdom' },
-];
-
-function getNavItems(country: string) {
-  const root = `https://policyengine.org/${country}`;
-  return [
-    { label: 'Research', href: `${root}/research` },
-    { label: 'Model', href: `${root}/model` },
-    { label: 'API', href: `${root}/api` },
-    { label: 'Python', href: `${root}/python` },
-    {
-      label: 'About',
-      href: `${root}/team`,
-      children: [
-        { label: 'Team', href: `${root}/team` },
-        { label: 'Supporters', href: `${root}/supporters` },
-        { label: 'Citations', href: `${root}/citations` },
-      ],
-    },
-    { label: 'Donate', href: `${root}/donate` },
-  ];
-}
 
 function CountryToggle({ country }) {
   const router = useRouter();
@@ -86,7 +61,6 @@ function CountryToggle({ country }) {
 }
 
 function YearInReview({ countryId }: { countryId: string }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   // Allow ?country=… to override the path segment for embedded usage.
@@ -101,24 +75,9 @@ function YearInReview({ countryId }: { countryId: string }) {
   const highlights = country === 'us' ? usHighlights : ukHighlights;
   const timeline = country === 'us' ? usTimeline : ukTimeline;
   const partners = country === 'us' ? usPartners : null;
-  const embedded = searchParams.get('embed') === 'true';
-
-  const handleCountryChange = (newCountry: string) => {
-    const params = searchParams.toString();
-    router.push(`/${newCountry}${params ? `?${params}` : ''}`);
-  };
 
   return (
     <>
-      {!embedded && (
-        <PolicyEngineHeader
-          navItems={getNavItems(country)}
-          countries={PE_COUNTRIES}
-          currentCountry={country}
-          onCountryChange={handleCountryChange}
-          logoHref={`https://policyengine.org/${country}`}
-        />
-      )}
       <CountryToggle country={country} />
       <Hero country={country} />
       <Stats stats={stats} country={country} />
@@ -146,7 +105,7 @@ function YearInReview({ countryId }: { countryId: string }) {
       <Partners partners={partners} />
       <Timeline timeline={timeline} country={country} />
       <SoftwareDev />
-      <Footer country={country} />
+      <Footer />
     </>
   );
 }

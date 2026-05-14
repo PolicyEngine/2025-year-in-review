@@ -2,9 +2,7 @@
 
 import './Footer.css';
 
-export default function Footer({ country = 'us' }) {
-  const root = `https://policyengine.org/${country}`;
-
+export default function Footer() {
   return (
     <footer className="footer">
       <h2 className="footer-title">Ready to explore policy?</h2>
@@ -19,13 +17,9 @@ export default function Footer({ country = 'us' }) {
         </svg>
       </a>
       <div className="footer-links">
-        <a href={`${root}/research`} className="footer-link">Research</a>
-        <a href={`${root}/model`} className="footer-link">Model</a>
-        <a href={`${root}/api`} className="footer-link">API</a>
-        <a href={`${root}/donate`} className="footer-link">Donate</a>
         <a href="https://github.com/PolicyEngine" className="footer-link">GitHub</a>
         <a href="https://blog.policyengine.org" className="footer-link">Blog</a>
-        <a href={`${root}/team`} className="footer-link">About</a>
+        <a href="https://policyengine.org/us/about" className="footer-link">About</a>
         <a href="https://twitter.com/thepolicyengine" className="footer-link">Twitter</a>
       </div>
       <p className="footer-copyright">
