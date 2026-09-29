@@ -87,7 +87,7 @@ function YearInReview({ countryId }: { countryId: string }) {
           provisions={obbbaProvisions}
           title="One Big Beautiful Bill Act"
           intro="We modeled all major OBBBA provisions. Click each to read our detailed analysis of its impacts."
-          ctaLink="https://policyengine.org/us/obbba-household-by-household"
+          ctaLink="https://www.policyengine.org/us/obbba-households"
           ctaText="Explore 40,000+ household impacts"
         />
       )}
