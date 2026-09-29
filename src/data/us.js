@@ -34,7 +34,7 @@ export const usHighlights = [
     title: "OBBBA Household Explorer",
     description:
       "Explore how the One Big Beautiful Bill Act affects 40,000+ representative households across income levels, states, and provisions.",
-    link: "https://policyengine.org/us/obbba-household-by-household",
+    link: "https://www.policyengine.org/us/obbba-households",
     linkText: "Explore households",
     image:
       "https://raw.githubusercontent.com/PolicyEngine/newsletters/refs/heads/newsletter-uploader-package/assets/images/obbba-household-by-household.gif",
