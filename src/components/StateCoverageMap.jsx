@@ -135,7 +135,7 @@ function HoverCard({ state, position, onMouseEnter, onMouseLeave }) {
   );
 }
 
-function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
+function USMap({ setHoveredState, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
   const handleMouseEnter = (stateAbbr, event) => {
     if (stateEngagements[stateAbbr]) {
       cancelHide();
@@ -194,7 +194,7 @@ function USMap({ hoveredState, setHoveredState, tooltipPosition, setTooltipPosit
   );
 }
 
-function WorldMap({ hoveredLocation, setHoveredLocation, tooltipPosition, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
+function WorldMap({ setHoveredLocation, setTooltipPosition, mapRef, onMouseLeave, cancelHide }) {
   const handleMarkerEnter = (key, data, event) => {
     cancelHide();
     const rect = mapRef.current?.getBoundingClientRect();

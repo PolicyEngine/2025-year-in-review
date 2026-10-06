@@ -78,7 +78,7 @@ export default function Stats({ stats, country }) {
           {country === 'us' ? 'United States' : 'United Kingdom'} Impact
         </h2>
         <div className="stats-grid">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div className="stat-card" key={`${stat.label}-${stat.number}`}>
               <div className="stat-number">
                 <AnimatedNumber
