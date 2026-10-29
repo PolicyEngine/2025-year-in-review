@@ -3,6 +3,7 @@ import "@policyengine/ui-kit/styles.css";
 
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import Script from 'next/script';
 
 const SITE_URL = 'https://policyengine.org/us/2025-year-in-review';
 const TITLE = 'PolicyEngine 2025 Year in Review';
@@ -48,6 +49,23 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <PolicyEngineShell country="us">{children}        </PolicyEngineShell>
+        {/* Google Analytics: policyengine.org's GA4 property; this app is served at
+         * policyengine.org/us/2025-year-in-review and /uk/2025-year-in-review
+         * through a rewrite, where the main site's GA does not reach. */}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-2YHG89FY0N"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2YHG89FY0N');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
